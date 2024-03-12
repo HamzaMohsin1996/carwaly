@@ -38,6 +38,9 @@ p{
 .small-p{
     font-size: 14px;
 }
+.custom-text-small{
+    font-size: 16px;
+}
 .text-grey{
     color: #989EBB;
 }
@@ -45,6 +48,7 @@ a{
     font-size: 20px !important;
     font-weight: 500 !important;
     color: #0F2882 !important;
+    text-decoration: none !important;
     
 }
 .extra-small-text{
@@ -73,6 +77,9 @@ a{
 }
 .custom-font-semibold{
     font-weight: 600;
+}
+.font-weight-500{
+    font-weight: 500;
 }
 .card-wrapper{
     padding: 16px;
@@ -175,19 +182,26 @@ a{
     background: #E6E8EE;
   }
 /* Custom Primary Buttons */
-.custom-primary-button{
-    background: #0F2882;
+.custom-btn{
     padding: 14px 32px;
     font-size: 20px;
     font-weight: 600;
-    color: #FFFFFF !important;
-    border: none;
     border-radius: 10px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     text-align: center;
     text-decoration: none !important;
     min-width: 230px;
     display: inline-block;
+    border: none;
+}
+.custom-primary-button{
+    background: #0F2882;
+    color: #FFFFFF !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.custom-primary-button-filled{
+    background: #0F2882;
+    color: #FFFFFF !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .custom-primary-button:hover{
     background:#141754;
@@ -198,22 +212,32 @@ a{
 } 
 .custom-secondary-button{
     color: #FF5450 !important;
-    padding: 14px 32px;
-    font-size: 20px;
-    font-weight: 600;
     border: 1px solid #FF5450;
-    border-radius: 10px;
-    text-align: center;
     text-decoration: none !important;
     transition: .3s ease-in;
-    min-width: 230px;
-    display: inline-block;
 }
 .custom-secondary-button:hover{
     background: #FF5450 !important;
     border: 1px solid transparent;
     color: white !important;
-   
+}
+.orange-filled-btn{
+    background-color: #FF5450 !important;
+    color: white !important;
+}
+.orange-filled-btn:hover{
+    background-color: white !important;
+    color: #FF5450 !important;
+    border: 1px solid #FF5450;
+}
+.white-outline-btn{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white !important;
+}
+.white-outline-btn:hover{
+    background-color: #FF5450 !important;
+    border: 1px solid transparent;
 }
 .custom-primary-button span{
     padding-right: 8px;
@@ -325,7 +349,7 @@ a{
 
 /* Ensure the logo doesn't shrink too much on smaller screens */
 .navbar-brand img {
-    max-height: 50px;
+    max-width: 190px;
 }
 
 /* Center telephone icon vertically */
@@ -437,12 +461,77 @@ a{
 
 .car-deals{
     min-height: 620px;
-    padding: 60px 0;
+    padding: 60px 80px;
     border-radius: 48px;
-    background-repeat: no-repeat !important;
+    background-repeat: no-repeat , no-repeat !important;
     background-position: center right , top left!important;
     background-size: contain, 20% !important;
+    color: white !important;
 }
+.car-deals p{
+    color: white !important;
+}
+.car-wrapper-top{
+    position: absolute;
+    top: 150px;
+    right: -140px;
+    max-width: 800px !important;
+}
+.custom-box-smile{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+
+}
+.custom-box-smile img{
+ max-width: 100%;
+
+}
+.big-card-wrapper{
+    background-size: cover !important;
+    min-height: 620px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 32px;
+    color: white !important;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0.8;
+    border-radius: 18px;
+}
+.small-height{
+    min-height: 300px;
+}
+.big-card-wrapper p{
+    color: white;
+}
+.custom-white-card-wrapper{
+    box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+    padding: 24px;
+    border-radius: 18px;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-auto-rows: 50px;
+    grid-gap: 10px;
+  }
+  
+  .short {
+    grid-row: span 4;
+  }
+  
+  .tall {
+    grid-row: span 6;
+  } 
+  
+  .customer-img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  
 @media (max-width: 1441px) {
 .banner-section{
     height: 680px;
