@@ -1,8 +1,19 @@
 $(document).ready(function(){
-    // Open dropdown menu on click of "All Cars" button
-    $('#allCarsBtn').on('click', function(){
-        $('#allCarsDropdown').toggleClass('show');
+    $('.allCarsBtn').on('click', function(){
+        $(this).next('.allCarsDropdown').toggleClass('show');
     });
+    
+    $('.allCarsBtn').mouseenter(function(){
+        $(this).next('.allCarsDropdown').addClass('show');
+    });
+    
+    $('.allCarsDropdown').mouseenter(function(){
+        $(this).addClass('show');
+    }).mouseleave(function(){
+        $(this).removeClass('show');
+    });
+    
+    
 });
    // Add an event listener for the 'scroll' event on the window object
    window.addEventListener('scroll', function() {
