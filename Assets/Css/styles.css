@@ -413,6 +413,8 @@ a{
     padding: 16px 32px;
     transition: top 0.3s ease; /* Adding transition for the 'top' property */
     background-color: white;
+    border: 1px solid #E6E8EE;
+
 }
 .scroll .custom-header{
     top: 26px;
