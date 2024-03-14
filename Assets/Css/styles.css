@@ -42,7 +42,10 @@ p{
     font-size: 16px;
 }
 .text-grey{
-    color: #989EBB;
+    color: #989EBB !important;
+}
+.custom-light-grey{
+    color: #575E8D;
 }
 a{
     font-size: 20px !important;
@@ -67,11 +70,9 @@ a{
     padding: 60px 0;
 }
 .custom-text-primary{
-    color: #0F2882;
+    color: #0F2882 !important;
 }
-.custom-text-black{
-    color: #1C1C45;
-}
+
 .custom-text-balck{
     color: #1C1C45;
 }
@@ -92,6 +93,51 @@ a{
 }
 .font-regular{
     font-weight: 400;
+}
+.custom-input-wrapper, .custom-select{ 
+    position: relative;
+}
+
+.custom-input{
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: #E6E8EE;
+    font-size: 16px;
+    font-weight: 400;
+    color: #575E8D;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    min-width: 330px;
+    padding-right: 60px;
+}
+.custom-input-wrapper img, .custom-select img{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+
+}
+.custom-input::placeholder{
+    font-size: 16px;
+    color: #575E8D;
+}
+.custom-select select{
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: #E6E8EE;
+    font-size: 16px;
+    font-weight: 400;
+    color: #575E8D;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    min-width: 330px;
+    padding-right: 60px;
 }
 .card-wrapper{
     padding: 16px;
@@ -205,6 +251,11 @@ a{
     display: inline-block;
     border: none;
 }
+.width-auto{
+    min-width: auto; 
+    font-size: 16px;
+    font-weight: 500;
+}
 .small-btn{
     padding: 10px !important;
     min-width: 150px !important;
@@ -220,9 +271,16 @@ a{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .custom-link{
-    color: white !important;
+    color: white ;
     font-size: 18px;
     font-weight: 400 !important;
+}
+.custom-transparent-btn{
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: #989EBB;
+    padding: 0 15px;
 }
 .custom-text-eclipse{
     display: -webkit-box;
@@ -288,6 +346,7 @@ a{
 .orange-filled-btn{
     background-color: #FF5450 !important;
     color: white !important;
+    border: 1px solid transparent;
 }
 .orange-filled-btn:hover{
     background-color: white !important;
@@ -303,17 +362,17 @@ a{
     background-color: #FF5450 !important;
     border: 1px solid transparent;
 }
-.custom-primary-button span{
+.orange-filled-btn  span{
     padding-right: 8px;
     display: inline-block; 
     transition: transform 0.3s ease;
 }
-.custom-primary-button span i{
+.orange-filled-btn  span i{
     font-weight: 700;
     transform: rotate(90deg); 
     transform-origin: center; 
 }
-.custom-primary-button:hover span i{
+.orange-filled-btn:hover span i{
     transform: unset; 
     transform-origin: center; 
 }
@@ -399,6 +458,10 @@ a{
     align-items: center;
     justify-content: center;
     padding: 15px;
+}
+.large-box-wrapper{
+    width: 64px;
+    height: 64px;  
 }
 .custom-box-wrapper img{
     max-width: 100%;
@@ -728,6 +791,155 @@ a{
     height: 32px;
     padding: 6px;
   }
+  input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+    /* All cars Page Css Start */
+.all-cars-section {
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    text-align: center;
+    margin-top: 200px;
+    height: auto;
+    min-height: 650px;
+    background-position: center right 300px !important;
+}
+.all-cars-section .banner-inner-section-wrapper{
+    max-width: 100%;
+}
+    /* Filters Css Start */
+.filters-wrapper{
+    border-radius: 24.34px;
+    background: #FFF;
+    box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+    padding: 24px 40px;
+}
+.filters-wrapper-inner{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.filters-wrapper-inner button{
+    min-width: auto !important;
+}
+/* Custom Slider Css */
+.custom-slider-inner-items{
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+.custom-links-filter{
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.40);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 24px;
+    margin: 0 14px;
+    min-width: 190px;
+    min-height: 150px;
+    font-size: 18px !important;
+    color: #575E8D !important;
+}
+.custom-links-filter img{
+    max-width: 100px;
+    padding-bottom: 10px;
+}
+.custom-slider .owl-dots{
+    display: none;
+}
+.custom-slider .owl-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.custom-slider .owl-nav button{
+    display: flex !important;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% !important;
+
+}
+.custom-slider .owl-nav button{
+    background: #FF5450 !important;
+    color: white !important;
+}
+.custom-slider .owl-nav button span{
+    display: none;
+}
+.custom-slider .owl-nav button:before {
+    font-family: "Font Awesome 5 Free";
+   
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+ }
+ .custom-slider .owl-nav .owl-next{
+    margin-right: -60px;
+ }
+ .custom-slider .owl-nav .owl-prev{
+    margin-left: -60px;
+ }
+ .custom-slider .owl-nav .owl-next:before{
+    content: "\f061";
+ }
+ .custom-slider .owl-nav .owl-prev:before{
+    content: "\f060";
+ }
+ .custom-slider.owl-theme .owl-nav button.disabled{
+    opacity: 1;
+    border: 1px solid #C8C8C8 !important;
+    background: #FFF !important;
+ }
+ .custom-slider.owl-theme .owl-nav button.disabled:hover{
+    cursor: not-allowed;
+ }
+ .custom-slider.owl-theme .owl-nav button.disabled::before{
+    color: #787878;
+ }
+  /* Optional: Add styles for navigation buttons, pagination, etc. */
+  .stats-section-wraper{
+    min-height: auto;
+  }
+  .stats-section {
+    margin: 58px 0 28px;
+  }
+.stats-section .custom-links-filter{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 265px;
+    min-height: auto;
+}
+.stats-section .custom-links-filter .custom-box-wrapper {
+    padding: 10px !important;
+}
+.stats-section .custom-links-filter .custom-box-wrapper  img{
+    max-width: 20px !important;
+    padding: 0 !important;
+}
+.stats-section p{
+    color: #989EBB !important;
+}
+
+.main-wrapper-inner{
+    margin-top: 220px;
+}
+  
 @media (max-width: 1441px) {
 .banner-section{
     height: 680px;
