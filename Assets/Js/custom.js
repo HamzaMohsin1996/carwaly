@@ -12,7 +12,22 @@ $(document).ready(function(){
     }).mouseleave(function(){
         $(this).removeClass('show');
     });
-    
+    $('.owl-carousel').owlCarousel({
+        loop:false,
+        margin:10,
+        nav:true,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:1
+          },
+          1000:{
+            items:1
+          }
+        }
+      });
     
 });
    // Add an event listener for the 'scroll' event on the window object
