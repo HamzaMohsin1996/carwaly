@@ -40,4 +40,61 @@ $(document).ready(function(){
         // Remove the 'scroll' class from the body element
         document.body.classList.remove('scroll');
     }
+ 
 });
+//Price Range Slider
+$(function() {
+  $("#price-range").slider({
+    step: 500,
+    range: true, 
+    min: 0, 
+    max: 20000, 
+    values: [0, 20000], 
+    slide: function(event, ui)
+    {$("#priceRange").val(ui.values[0] + " - " + ui.values[1]);}
+  });
+  $("#priceRange").val($("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1));
+
+// Initialize datepicker for year range
+$("#yearRange").datepicker({
+  changeYear: true,
+  dateFormat: 'yy',
+  showButtonPanel: true,
+  onClose: function(dateText, inst) {
+    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+    $(this).datepicker('setDate', new Date(year, 1));
+  }
+});
+
+// Initialize slider with year range
+$("#yearRange-wrap").slider({
+  range: true,
+  min: 2000, // Minimum year
+  max: 2025, // Maximum year
+  values: [2010, 2020], // Initial range values
+  slide: function(event, ui) {
+    $("#yearRange").text(ui.values[0] + " - " + ui.values[1]);
+  }
+});
+
+// Update the displayed values alongside the slider
+$("#yearRange").text($("#yearRange-wrap").slider("values", 0) +
+  " - " + $("#yearRange-wrap").slider("values", 1));
+});
+
+//Milage Range Slider
+$(function() {
+  $("#milage-range").slider({
+    step: 500,
+    range: true, 
+    min: 0, 
+    max: 20000, 
+    values: [0, 20000], 
+    slide: function(event, ui)
+    {$("#milageRange").val(ui.values[0] + " - " + ui.values[1]);}
+  });
+  $("#milageRange").val($("#milage-range").slider("values", 0) + " - " + $("#milage-range").slider("values", 1));
+})
+
+
+

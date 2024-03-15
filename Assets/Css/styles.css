@@ -41,11 +41,15 @@ p{
 .custom-text-small{
     font-size: 16px;
 }
+
 .text-grey{
     color: #989EBB !important;
 }
 .custom-light-grey{
     color: #575E8D;
+}
+.custom-text-black{
+    color: #1C1C45;
 }
 a{
     font-size: 20px !important;
@@ -73,9 +77,6 @@ a{
     color: #0F2882 !important;
 }
 
-.custom-text-balck{
-    color: #1C1C45;
-}
 .text-grey-light{
     color: #677489;
 }
@@ -96,6 +97,9 @@ a{
 }
 .custom-input-wrapper, .custom-select{ 
     position: relative;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 
 .custom-input{
@@ -109,7 +113,6 @@ a{
     box-shadow: none;
     outline: none;
     width: 100%;
-    min-width: 330px;
     padding-right: 60px;
 }
 .custom-input-wrapper img, .custom-select img{
@@ -136,7 +139,6 @@ a{
     box-shadow: none;
     outline: none;
     width: 100%;
-    min-width: 330px;
     padding-right: 60px;
 }
 .card-wrapper{
@@ -260,6 +262,10 @@ a{
     padding: 10px !important;
     min-width: 150px !important;
 }
+.extra-small-btn{
+    padding: 12px 22px !important;
+    min-width: auto !important;
+}
 .custom-primary-button{
     background: #0F2882;
     color: #FFFFFF !important;
@@ -271,7 +277,7 @@ a{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .custom-link{
-    color: white ;
+    color: white !important;
     font-size: 18px;
     font-weight: 400 !important;
 }
@@ -288,12 +294,14 @@ a{
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.custom-text-wrap-3{
-    -webkit-line-clamp: 3;
+.custom-text-wrap-1{
+    -webkit-line-clamp: 1;
 }
-
 .custom-text-wrap-2{
     -webkit-line-clamp: 2;
+}
+.custom-text-wrap-3{
+    -webkit-line-clamp: 3;
 }
 .custom-text-wrap-4{
     -webkit-line-clamp: 4;
@@ -483,7 +491,14 @@ a{
     top: 26px;
 
 }
-
+.custom-header  .nav-item > a {
+    font-size: 16px !important;
+}
+.custom-header .orange-filled-btn.custom-btn{
+    font-size: 16px !important;
+    padding: 8px 18px !important;
+    min-width: auto !important;
+}
 /* Ensure the logo doesn't shrink too much on smaller screens */
 .navbar-brand img {
     max-width: 190px;
@@ -827,6 +842,9 @@ input[type=number]::-webkit-outer-spin-button {
 .filters-wrapper-inner button{
     min-width: auto !important;
 }
+.filters-wrapper-inner-wrapper {
+    flex: 1;
+}
 /* Custom Slider Css */
 .custom-slider-inner-items{
     display: flex;
@@ -922,8 +940,10 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    min-width: 265px;
+    max-width: 265px;
+    width: 100%;
     min-height: auto;
+    margin: 20px;
 }
 .stats-section .custom-links-filter .custom-box-wrapper {
     padding: 10px !important;
@@ -937,26 +957,105 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main-wrapper-inner{
-    margin-top: 220px;
+    margin-top: 180px;
 }
   
+
+.custom-slider-wrapper .custom-slider-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+.custom-slider-wrapper .custom-slider-inner input{
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    max-width: 150px;
+    text-align: right;
+    color:  #575E8D;
+    font-size: 14px;
+    font-weight: 400;
+}
+.custom-slider-wrapper .custom-slider-inner p{
+    color:  #1C1C45;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.custom-slider-wrapper  .ui-widget.ui-widget-content {
+        border: 1px solid #0F2882;
+        height: 1px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid #0F2882;
+    transform: translateY(-16%);
+}
+.custom-slider-wrapper{
+    display: flex;
+    align-items: center;
+
+}
+.custom-slider-wrapper .slider-box{
+    padding-left: 12px;
+    width: calc(100% - 32px);
+}
+.custom-pagination-wrapper .page-item.active .page-link{
+    color: white !important;
+    background-color: #0F2882 !important;
+}
+.sidebar-wrapper{
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 150px;
+    margin-bottom: 50px;
+}
 @media (max-width: 1441px) {
+    p{
+        font-size: 16px;
+    }
+    .small-p{
+        font-size: 12px;
+    }
+    .card-details-wrapper-image {
+        width: 48px;
+        height: 48px;
+        padding: 5px;
+    }
+    .custom-image-text-wrap img{
+        margin-right: 4px;
+        max-width: 14px;
+        max-height: 14px;
+    }
+
 .banner-section{
     height: 680px;
 }
 .custom-line-wrapper{
     min-width: 40px;
 }
-.custom-header{
-    max-width: 1100px;
+.all-cars-section{
+    background-position: center right 90px !important;
 }
 }
 @media (max-width: 1199px) {
+    .stats-section {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    .custom-header{
+        max-width: 1100px;
+    }
     .best-deal-section{
         padding-top: 80px;
     }
     .section-padding{
-        padding: 40px 0 !important;
+        padding: 40px 0 ;
     }
     .custom-header {
         max-width: 900px;
@@ -982,6 +1081,9 @@ input[type=number]::-webkit-outer-spin-button {
     background: linear-gradient(270deg, #141754 0%, #112374 28.33%, #0F2982 100%) !important;
 
    } 
+   .banner-section.all-cars-section{
+    background: none !important;
+   }
    .container-xxl{
     padding: 0 24px !important;
    }
