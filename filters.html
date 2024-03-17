@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarWalay</title>
+    <title>Filters</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -180,7 +180,14 @@
             <div class="row">
                 <div class="col-12 col-lg-4 col-xl-3">
                     <div class="card-wrapper sidebar-wrapper">
-                        <h5 class="custom-text-black custom-font-semibold">Filters</h5>
+                        <div class="d-flex align-items-center justify-content-between">
+                             <h5 class="custom-text-black custom-font-semibold">Filters</h5>
+                            <button class="close-btn-filter-sidebar">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+  
+                            </button>
+                        </div>
+                        
                         <div>
                             <div class="custom-input-wrapper my-3">
                                 <div class="custom-input-wrapper">
@@ -287,6 +294,11 @@
                                         </div>
                                     </div>
                                   </div>
+                                  
+                            </div>
+                            <div class="d-flex align-items-center my-3" id="filter-btn-mobile">
+                                <button class="custom-secondary-button custom-btn width-auto extra-small-btn me-3">Clear all</button>
+                                <button class="orange-filled-btn custom-btn width-auto extra-small-btn">Show Results</button>
                             </div>
                         </div>
                     </div>
@@ -299,7 +311,7 @@
                             <div class="col-12 text-center">
                                 <div class="d-flex align-items-center justify-content-start">
                                   
-                                        <button class="custom-toggle-btn" type="button">
+                                        <button class="custom-toggle-btn" type="button" id="filters-toggle">
                                             <svg id="hamburger" class="Header__toggle-svg" viewbox="0 0 60 40">
                                                 <g stroke="#0F2882" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                                                     <path id="top-line" d="M10,10 L50,10 Z"></path>
@@ -319,7 +331,7 @@
                         </div>
                         <div class="row g-4 custom-padding-inner-section pb-0">
                             <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper sucess"> Available</span>
                                         <img src="./Assets/Images/audi-r6.png" alt="Car Image">
@@ -343,22 +355,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                       
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper grey"> Coming Soon</span>
                                         <img src="./Assets/Images/bently.png" alt="Car Image">
@@ -382,22 +389,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                        
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper black"> Available</span>
                                         <img src="./Assets/Images/cherry-car.png" alt="Car Image">
@@ -421,22 +423,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper sucess"> Available</span>
                                         <img src="./Assets/Images/audi-r6.png" alt="Car Image">
@@ -460,22 +457,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper grey"> Coming Soon</span>
                                         <img src="./Assets/Images/bently.png" alt="Car Image">
@@ -499,22 +491,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper black"> Available</span>
                                         <img src="./Assets/Images/cherry-car.png" alt="Car Image">
@@ -538,23 +525,18 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                            
                             <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper red">Not Available</span>
                                         <img src="./Assets/Images/audi-r6.png" alt="Car Image">
@@ -578,22 +560,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper grey"> Coming Soon</span>
                                         <img src="./Assets/Images/bently.png" alt="Car Image">
@@ -617,22 +594,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper black"> Available</span>
                                         <img src="./Assets/Images/cherry-car.png" alt="Car Image">
@@ -656,23 +628,18 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                            
                             <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper sucess"> Available</span>
                                         <img src="./Assets/Images/audi-r6.png" alt="Car Image">
@@ -696,22 +663,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper grey"> Coming Soon</span>
                                         <img src="./Assets/Images/bently.png" alt="Car Image">
@@ -735,22 +697,17 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
+                                <a href="car-details.html" class="card-wrapper">
                                     <div class="custom-card-img-wrapper">
                                         <span class="custom-status-wrapper black"> Available</span>
                                         <img src="./Assets/Images/cherry-car.png" alt="Car Image">
@@ -774,17 +731,12 @@
                                                         <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
                                                         <p class="small-p custom-text-wrap-1 custom-text-eclipse">152,000 km</p>
                                                     </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <p class="small-p">3659/month</p>
-                                                    </div>
+                                                  
                                                 </div>
                                                
                                             </div>
                                         </div>
-                                        <div class="card-wrapper-bottom">
-                                            <p class="small-p">American</p>
-                                            <p class="small-p"> Auto loan available</p>
-                                        </div>
+                                      
                                     </div>
                                 </a>
                             </div>
@@ -844,7 +796,7 @@
                                         <p class="small-p ">Shopper</p>
                                     </div>
                             </div>
-                            <p class="mt-3 mb-4 custom-text-eclipse">Initially hesitant to part with my car due to its rough condition, but this company surprised me. Their generous offer surpassed my expectations, and they effortlessly managed every detail of the sale. I couldn't be more pleased with the outcome.</p>
+                            <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-5">Initially hesitant to part with my car due to its rough condition, but this company surprised me. Their generous offer surpassed my expectations, and they effortlessly managed every detail of the sale. I couldn't be more pleased with the outcome.</p>
                             <p class="custom-text-small">Aug 22, 2023</p></div>
                                 <div class="grid-item custom-white-card-wrapper short">
                                     <div class="d-flex align-items-center">

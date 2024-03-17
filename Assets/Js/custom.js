@@ -2,6 +2,15 @@ $(document).ready(function(){
     $('.allCarsBtn').on('click', function(){
         $(this).next('.allCarsDropdown').toggleClass('show');
     });
+    $('#filters-toggle').on('click', function(){
+      $('.sidebar-wrapper').toggleClass('show');
+      document.body.style.overflow = "hidden"; // Disable scrolling on the body
+  });
+  $('.close-btn-filter-sidebar').on('click', function(){
+    $('.sidebar-wrapper').removeClass('show');
+    document.body.style.overflow = "scroll"; // Disable scrolling on the body
+});
+  
     
     $('.allCarsBtn').mouseenter(function(){
         $(this).next('.allCarsDropdown').addClass('show');
@@ -82,6 +91,8 @@ $("#yearRange").text($("#yearRange-wrap").slider("values", 0) +
   " - " + $("#yearRange-wrap").slider("values", 1));
 });
 
+
+
 //Milage Range Slider
 $(function() {
   $("#milage-range").slider({
@@ -96,5 +107,20 @@ $(function() {
   $("#milageRange").val($("#milage-range").slider("values", 0) + " - " + $("#milage-range").slider("values", 1));
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all thumbnail images
+  var thumbnails = document.querySelectorAll(".thumbnail");
+
+  // Add click event listener to each thumbnail
+  thumbnails.forEach(function(thumbnail) {
+    thumbnail.addEventListener("click", function() {
+      // Get the src attribute of the clicked thumbnail
+      var newImageSrc = this.src;
+      
+      // Set the big image source to the clicked thumbnail's source
+      document.getElementById("big-image").src = newImageSrc;
+    });
+  });
+});
 
 
