@@ -115,12 +115,13 @@ a.custom-text-primary{
     font-weight: 400;
 }
 
-.custom-input-wrapper, .custom-select{ 
+.custom-input-wrapper, .custom-select, .custom-textarea{ 
     position: relative;
     box-shadow: none;
     border: none;
     outline: none;
 }
+
 
 .custom-input{
     padding: 16px 20px;
@@ -134,6 +135,18 @@ a.custom-text-primary{
     outline: none;
     width: 100%;
     padding-right: 60px;
+}
+.custom-textarea{
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: #E6E8EE;
+    font-size: 16px;
+    font-weight: 400;
+    color: #575E8D;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
 }
 .custom-input-wrapper img, .custom-select img{
     width: 24px;
