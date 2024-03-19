@@ -368,7 +368,6 @@ a.custom-text-primary{
 .filter-cars{
     font-size: 12px !important;
     color: #545454 !important;
- 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -377,6 +376,7 @@ a.custom-text-primary{
 }
 .filter-cars img{
     max-width: 50px;
+    max-height: 20px;
 }
 .filter-by-city{
     display: flex;
@@ -1024,7 +1024,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .main-wrapper-inner{
-    margin-top: 180px;
+    padding-top: 180px;
 }
   
 
@@ -1214,6 +1214,18 @@ input[type=number]::-webkit-outer-spin-button {
 }    
 .close-btn-filter-sidebar{
     display: none;
+}
+
+/* Contact us page Css */
+.contact-us-banner{
+    padding: 140px 0 60px;
+    height: auto !important;
+}
+.contact-us-banner .banner-inner-section-wrapper{
+    max-width: 100%;
+}
+.contact-us-banner .banner-inner-section-wrapper p{
+    color: white;
 }
 @media (max-width: 1441px) {
     p{
