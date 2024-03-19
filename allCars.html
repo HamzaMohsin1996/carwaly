@@ -1,1477 +1,1388 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CarWalay</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="./Assets/Css/styles.css">
-    
-    </head>
-<body>
-    <div class="main-wrapper">
-            <!-- Header html Start -->
-        <header class="navbar navbar-expand-lg fixed-top custom-header">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CarWalay</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="./Assets/Css/styles.css">
+   </head>
+   <body>
+      <div class="main-wrapper">
+         <!-- Header html Start -->
+         <header class="navbar navbar-expand-lg fixed-top custom-header">
             <div class="container-xxl">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./Assets/Images/logo.png" alt="CarWalay Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav align-items-center">
-                        <!-- Container for All Cars button and dropdown menu -->
-                        <div class="dropdown-container">
-                            <li class="nav-item">
-                                <a class="nav-link allCarsBtn" href="./allCars.html" >All Cars</a>
-                                 <!-- Dropdown Menu for All Cars -->
-                            <div class="dropdown-menu dropdown-menu-wide allCarsDropdown" >
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <p class="small-p text-grey">Find Cars By Types</p>
-                                            <div class="row g-4 my-2">
-                                                <div class="col-lg-4">
-                                                    <a href="./filters.html" class="filter-cars">
-                                                        <img src="./Assets/Images/family-car.png" alt="Family Car">
-                                                        Family Cars
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <a href="./filters.html" class="filter-cars">
-                                                        <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
-                                                        1300cc cars
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <a href="./filters.html" class="filter-cars">
-                                                        <img src="./Assets/Images/5seater.png" alt="5seater Car">
-                                                        5 Seater
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <a href="./filters.html" class="filter-cars">
-                                                        <img src="./Assets/Images/imported-car.png" alt="Imported Car">
-                                                        Imported cars
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <a href="./filters.html" class="filter-cars">
-                                                        <img src="./Assets/Images/small-car.png" alt="Small Car">
-                                                        Small cars
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <a href="./filters.html" class="filter-cars">
-                                                        <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
-                                                        1300cc cars
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <p class="small-p text-grey py-3">Find Cars By City</p>
-                                            <ul class="filter-by-city">
-                                                <li><a href="#" class="extra-small-text">Philadelphia</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p class="small-p text-grey mb-2">Find Cars By Types</p>
-                                            <ul>
-                                                <li class="py-2">
-                                                    <a href="#" class="filter-by-car-types">
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                                <img src="./Assets/Images/info-circle.png" alt="Search Icon Image">
-                                                            </div>
-                                                            <div class="mx-3">
-                                                                <p class="custom-font-bold-extra custom-text-small custom-text-black">Reviews</p>
-                                                                <p class="small-p text-grey-light">Read what others are saying</p>
-                                                            </div>
-                                                        </div>
-                                                        <i class="fa fa-solid fa-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="py-2">
-                                                    <a href="#" class="filter-by-car-types">
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                                <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
-                                                            </div>
-                                                            <div class="mx-3">
-                                                                <p class="custom-font-bold-extra custom-text-small custom-text-black">Cars</p>
-                                                                <p class="small-p text-grey-light">Search from a pool of options</p>
-                                                            </div>
-                                                        </div>
-                                                        <i class="fa fa-solid fa-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="py-2">
-                                                    <a href="#" class="filter-by-car-types">
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                                <img src="./Assets/Images/eye.png" alt="Search Icon Image">
-                                                            </div>
-                                                            <div class="mx-3">
-                                                                <p class="custom-font-bold-extra custom-text-small custom-text-black">View All</p>
-                                                                <p class="small-p text-grey-light">Discover Everything</p>
-                                                            </div>
-                                                        </div>
-                                                        <i class="fa fa-solid fa-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="py-2">
-                                                    <a href="#" class="filter-by-car-types">
-                                                        <div class="d-flex align-items-center justify-content-between">
-                                                            <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                                <img src="./Assets/Images/24-support.png" alt="Search Icon Image">
-                                                            </div>
-                                                            <div class="mx-3">
-                                                                <p class="custom-font-bold-extra custom-text-small custom-text-black">Support</p>
-                                                                <p class="small-p text-grey-light">Contact us for more details</p>
-                                                            </div>
-                                                        </div>
-                                                        <i class="fa fa-solid fa-arrow-right"></i>
-                                                    </a>
-                                                </li>
-                                            </ul> 
-                                        </div>
+               <a class="navbar-brand" href="./index.html">
+               <img src="./Assets/Images/logo.png" alt="CarWalay Logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav align-items-center">
+                     <!-- Container for All Cars button and dropdown menu -->
+                     <div class="dropdown-container">
+                        <li class="nav-item">
+                           <a class="nav-link allCarsBtn" href="./allCars.html" >All Cars</a>
+                           <!-- Dropdown Menu for All Cars -->
+                           <div class="dropdown-menu dropdown-menu-wide allCarsDropdown" >
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <p class="small-p text-grey">Find Cars By Types</p>
+                                       <div class="row g-4 my-2">
+                                          <div class="col-lg-4">
+                                             <a href="./filters.html" class="filter-cars">
+                                             <img src="./Assets/Images/family-car.png" alt="Family Car">
+                                             Family Cars
+                                             </a>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <a href="./filters.html" class="filter-cars">
+                                             <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
+                                             1300cc cars
+                                             </a>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <a href="./filters.html" class="filter-cars">
+                                             <img src="./Assets/Images/5seater.png" alt="5seater Car">
+                                             5 Seater
+                                             </a>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <a href="./filters.html" class="filter-cars">
+                                             <img src="./Assets/Images/imported-car.png" alt="Imported Car">
+                                             Imported cars
+                                             </a>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <a href="./filters.html" class="filter-cars">
+                                             <img src="./Assets/Images/small-car.png" alt="Small Car">
+                                             Small cars
+                                             </a>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <a href="./filters.html" class="filter-cars">
+                                             <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
+                                             1300cc cars
+                                             </a>
+                                          </div>
+                                       </div>
+                                       <p class="small-p text-grey py-3">Find Cars By City</p>
+                                       <ul class="filter-by-city">
+                                          <li><a href="#" class="extra-small-text">Philadelphia</a></li>
+                                       </ul>
                                     </div>
-                                </div>
-                            </div>
-                            </li>
-                           
-                        </div>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                                    <div class="col-md-6">
+                                       <p class="small-p text-grey mb-2">Find Cars By Types</p>
+                                       <ul>
+                                          <li class="py-2">
+                                             <a href="#" class="filter-by-car-types">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                      <img src="./Assets/Images/info-circle.png" alt="Search Icon Image">
+                                                   </div>
+                                                   <div class="mx-3">
+                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">Reviews</p>
+                                                      <p class="small-p text-grey-light">Read what others are saying</p>
+                                                   </div>
+                                                </div>
+                                                <i class="fa fa-solid fa-arrow-right"></i>
+                                             </a>
+                                          </li>
+                                          <li class="py-2">
+                                             <a href="#" class="filter-by-car-types">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                      <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
+                                                   </div>
+                                                   <div class="mx-3">
+                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">Cars</p>
+                                                      <p class="small-p text-grey-light">Search from a pool of options</p>
+                                                   </div>
+                                                </div>
+                                                <i class="fa fa-solid fa-arrow-right"></i>
+                                             </a>
+                                          </li>
+                                          <li class="py-2">
+                                             <a href="#" class="filter-by-car-types">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                      <img src="./Assets/Images/eye.png" alt="Search Icon Image">
+                                                   </div>
+                                                   <div class="mx-3">
+                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">View All</p>
+                                                      <p class="small-p text-grey-light">Discover Everything</p>
+                                                   </div>
+                                                </div>
+                                                <i class="fa fa-solid fa-arrow-right"></i>
+                                             </a>
+                                          </li>
+                                          <li class="py-2">
+                                             <a href="#" class="filter-by-car-types">
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                      <img src="./Assets/Images/24-support.png" alt="Search Icon Image">
+                                                   </div>
+                                                   <div class="mx-3">
+                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">Support</p>
+                                                      <p class="small-p text-grey-light">Contact us for more details</p>
+                                                   </div>
+                                                </div>
+                                                <i class="fa fa-solid fa-arrow-right"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reviews</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blogs</a>
-                           
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                           
-                        </li>
-                        <li class="nav-item">
-                            <a class="orange-filled-btn custom-btn" href="https://wa.me/18564092768">
-                                <span><i class="fab fa-whatsapp"></i></span> +(1) 856 409-2768</a>
-                        </li>
-                    </ul>
-                </div>
+                     </div>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Reviews</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Blogs</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="orange-filled-btn custom-btn" href="https://wa.me/18564092768">
+                        <span><i class="fab fa-whatsapp"></i></span> +(1) 856 409-2768</a>
+                     </li>
+                  </ul>
+               </div>
             </div>
-        </header>
-            <!-- Header html end -->
-            <!-- Banner Section html Start -->
-            <section class="banner-section all-cars-section" style="background: url(./Assets/Images/all-cars-bg.png); ">
-                <div class="container-xxl">
-                    <div class="banner-inner-section-wrapper">
-                            <h3 class="custom-text-black custom-font-semibold">Find Your Dream Car</h3>
-                            <h1 class="custom-text-primary">Discover Your Perfect Ride</h1>
-                            <div>
-                                <p class="custom-padding-top-bottom custom-light-grey">Embark on a seamless journey to find the car that suits your lifestyle. Our user-friendly filters empower you to personalize your search, ensuring you discover vehicles that match your unique preferences. From make and model to budget and features, fine-tune your exploration and uncover a curated list of options that align with your dream ride. Your perfect car is just a few clicks away – start your search now!</p>
-                                                        
-                            </div> 
-                            <div class="filters-wrapper text-left mt-5">
-                                <div class="container-xxl">
-                                    <div class="filters-wrapper-inner">
-                                        <h5 class="custom-text-black text-left mb-2">Filter by</h5>
-                                        <div class="d-flex align-items-center gap-4 w-100">
-                                            <div class="filters-wrapper-inner-wrapper">
-                                                <div class="custom-input-wrapper">
-                                                    <input type="text" class="custom-input" placeholder="Modal">
-                                                    <img src="./Assets/Images/input-car.png" alt="Modal">
-                                                </div>
-                                            </div>
-                                            <div class="filters-wrapper-inner-wrapper">
-                                                <div class="custom-input-wrapper">
-                                                    <input type="text" class="custom-input" placeholder="City">
-                                                    <img src="./Assets/Images/location.png" alt="City">
-                                                </div>
-                                            </div>
-                                            <div class="filters-wrapper-inner-wrapper">
-                                                <div class="custom-input-wrapper">
-                                                    <input type="number" class="custom-input" placeholder="Price Range">
-                                                    <img src="./Assets/Images/coin.png" alt="Price Range">
-                                                </div>
-                                            </div>
-                                            <button class="custom-primary-button custom-btn" >Search</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Banner Section html End -->
-        
-                <!-- Best Sellers Section html Start -->
-                <section class="section-padding ">
-                    <div class="container-xxl">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <h2 class="custom-text-primary custom-font-bold">Best Sellers</h2>
-                                    </div>
-                                    <a class="custom-link custom-text-primary" href="#">View All  Best Sellers</a>
-                                </div>
-
-                            </div>
-
+         </header>
+         <!-- Header html end -->
+         <!-- Banner Section html Start -->
+         <section class="banner-section all-cars-section" style="background: url(./Assets/Images/all-cars-bg.png); ">
+            <div class="container-xxl">
+               <div class="banner-inner-section-wrapper">
+                  <h3 class="custom-text-black custom-font-semibold">Find Your Dream Car</h3>
+                  <h1 class="custom-text-primary">Discover Your Perfect Ride</h1>
+                  <div>
+                     <p class="custom-padding-top-bottom custom-light-grey">Embark on a seamless journey to find the car that suits your lifestyle. Our user-friendly filters empower you to personalize your search, ensuring you discover vehicles that match your unique preferences. From make and model to budget and features, fine-tune your exploration and uncover a curated list of options that align with your dream ride. Your perfect car is just a few clicks away – start your search now!</p>
+                  </div>
+                  <div class="filters-wrapper text-left mt-5">
+                     <div class="container-xxl">
+                        <div class="filters-wrapper-inner">
+                           <h5 class="custom-text-black text-left mb-2">Filter by</h5>
+                           <div class="d-flex align-items-center gap-4 w-100">
+                              <div class="filters-wrapper-inner-wrapper">
+                                 <div class="custom-input-wrapper">
+                                    <input type="text" class="custom-input" placeholder="Modal">
+                                    <img src="./Assets/Images/input-car.png" alt="Modal">
+                                 </div>
+                              </div>
+                              <div class="filters-wrapper-inner-wrapper">
+                                 <div class="custom-input-wrapper">
+                                    <input type="text" class="custom-input" placeholder="City">
+                                    <img src="./Assets/Images/location.png" alt="City">
+                                 </div>
+                              </div>
+                              <div class="filters-wrapper-inner-wrapper">
+                                 <div class="custom-input-wrapper">
+                                    <input type="number" class="custom-input" placeholder="Price Range">
+                                    <img src="./Assets/Images/coin.png" alt="Price Range">
+                                 </div>
+                              </div>
+                              <button class="custom-primary-button custom-btn" >Search</button>
+                           </div>
                         </div>
-                        <div class="row g-4 custom-padding-inner-section pb-0">
-                            <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper sucess"> Available</span>
-                                        <img src="./Assets/Images/audi-r6.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper grey"> Coming Soon</span>
-                                        <img src="./Assets/Images/bently.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper black"> Available</span>
-                                        <img src="./Assets/Images/cherry-car.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                           
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Banner Section html End -->
+         <!-- Best Sellers Section html Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                           <h2 class="custom-text-primary custom-font-bold">Best Sellers</h2>
                         </div>
-                    </div>
-                </section> 
-                <!-- Best Sellers Section End -->
-                 <!-- Search By Cars Section html Start -->
-                 <section class="section-padding ">
-                    <div class="container-xxl">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <h2 class="custom-text-primary custom-font-bold">Search By Car Types</h2>
-                                    </div>
-                                </div>
-
-                            </div>
-
+                        <a class="custom-link custom-text-primary" href="#">View All  Best Sellers</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row g-4 custom-padding-inner-section pb-0">
+                  <div class="col-12 col-md-6 col-xl-4 ">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper sucess"> Available</span>
+                           <img src="./Assets/Images/audi-r6.png" alt="Car Image">
                         </div>
-                        <div class="owl-carousel owl-theme custom-slider my-3">
-                            <div class="item">
-                                <div class="custom-slider-inner-items row g-4">
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                            Automatic cars
-                                        </a>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
                                     </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                            Family Cars
-                                        </a>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
                                     </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/big-car.png" alt="big Car">
-                                            Big Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            5 Seater
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                            Small cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                            Imported cars
-                                        </a>
-                                    </div>
-                                    
-                          
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            4 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/old-car.png" alt="Old Car">
-                                            Old Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="big Car">
-                                            1300cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/1000cc.png" alt="Automated Car">
-                                            1000cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5door-car.png" alt="Small Car">
-                                            5 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
-                                            Japanese cars
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="custom-slider-inner-items">
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                            Automatic cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                            Family Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/big-car.png" alt="big Car">
-                                            Big Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            5 Seater
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                            Small cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                            Imported cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            4 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/old-car.png" alt="Old Car">
-                                            Old Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="big Car">
-                                            1300cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/1000cc.png" alt="Automated Car">
-                                            1000cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5door-car.png" alt="Small Car">
-                                            5 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
-                                            Japanese cars
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="custom-slider-inner-items">
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                            Automatic cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                            Family Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/big-car.png" alt="big Car">
-                                            Big Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            5 Seater
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                            Small cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                            Imported cars
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                                <div class="custom-slider-inner-items">
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            4 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/old-car.png" alt="Old Car">
-                                            Old Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="big Car">
-                                            1300cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/1000cc.png" alt="Automated Car">
-                                            1000cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5door-car.png" alt="Small Car">
-                                            5 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
-                                            Japanese cars
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="custom-slider-inner-items">
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                            Automatic cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                            Family Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/big-car.png" alt="big Car">
-                                            Big Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            5 Seater
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                            Small cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                            Imported cars
-                                        </a>
-                                    </div>
-                                    
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                            4 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/old-car.png" alt="Old Car">
-                                            Old Cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5seater-car.png" alt="big Car">
-                                            1300cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/1000cc.png" alt="Automated Car">
-                                            1000cc cars
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/5door-car.png" alt="Small Car">
-                                            5 Door
-                                        </a>
-                                    </div>
-                                    <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                        <a href="javascript:void(0)" class="custom-links-filter">
-                                            <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
-                                            Japanese cars
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                          </div>
-                          
-                          
-                    </div>
-                </section> 
-                <!-- Search By Cars Section End -->
-                 <!-- Featured Section html Start -->
-                 <section class="section-padding ">
-                    <div class="container-xxl">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <h2 class="custom-text-primary custom-font-bold">Featured Cars</h2>
-                                    </div>
-                                    <a class="custom-link custom-text-primary" href="#">View All  Featured Cars</a>
-                                </div>
-
-                            </div>
-
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="row g-4 custom-padding-inner-section pb-0">
-                            <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper sucess"> Available</span>
-                                        <img src="./Assets/Images/audi-r6.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper grey"> Coming Soon</span>
-                                        <img src="./Assets/Images/bently.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper black"> Available</span>
-                                        <img src="./Assets/Images/cherry-car.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                           
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper grey"> Coming Soon</span>
+                           <img src="./Assets/Images/bently.png" alt="Car Image">
                         </div>
-                    </div>
-                </section> 
-                <!-- Featured Section End -->
-                   <!-- New Models Section html Start -->
-                   <section class="section-padding ">
-                    <div class="container-xxl">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <h2 class="custom-text-primary custom-font-bold">New Models</h2>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
                                     </div>
-                                    <a class="custom-link custom-text-primary" href="#">View All  New Models</a>
-                                </div>
-
-                            </div>
-
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="row g-4 custom-padding-inner-section pb-0">
-                            <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper sucess"> Available</span>
-                                        <img src="./Assets/Images/audi-r6.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper grey"> Coming Soon</span>
-                                        <img src="./Assets/Images/bently.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper black"> Available</span>
-                                        <img src="./Assets/Images/cherry-car.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                           
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper black"> Available</span>
+                           <img src="./Assets/Images/cherry-car.png" alt="Car Image">
                         </div>
-                    </div>
-                </section> 
-                <!-- New Models Section End -->
-                          <!-- Search By models Section html Start -->
-                          <section class="section-padding ">
-                            <div class="container-xxl">
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div>
-                                                <h2 class="custom-text-primary custom-font-bold">Search By Models</h2>
-                                            </div>
-                                        </div>
-        
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
                                     </div>
-        
-                                </div>
-                                <div class="owl-carousel owl-theme custom-slider my-3">
-                                    <div class="item">
-                                        <div class="custom-slider-inner-items">
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/toyota-logo.png" alt="Toyota Car">
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/suzuki.png" alt="Suzuki Car">
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/honda-logo.png" alt="Honda Logo Car">
-                                               
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/daihatsu.png" alt="Daihatsu Car">
-                                                  
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/nissan-logo.png" alt="Nissan Car">
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/kia.png" alt="kia Car">
-                                                </a>
-                                            </div>
-                                            
-                                        </div>
-                                        
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
                                     </div>
-                                    <div class="item">
-                                        <div class="custom-slider-inner-items">
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                                    Automatic cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                                    Family Cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/big-car.png" alt="big Car">
-                                                    Big Cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                                    5 Seater
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                                    Small cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                                    Imported cars
-                                                </a>
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="item">
-                                        <div class="custom-slider-inner-items">
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                                    Automatic cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                                    Family Cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/big-car.png" alt="big Car">
-                                                    Big Cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                                    5 Seater
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                                    Small cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                                    Imported cars
-                                                </a>
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                    </div>
-                                    <div class="item">
-                                        <div class="custom-slider-inner-items">
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/automated-car.png" alt="Automated Car">
-                                                    Automatic cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/family-car.png" alt="Automated Car">
-                                                    Family Cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/big-car.png" alt="big Car">
-                                                    Big Cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
-                                                    5 Seater
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/small-new-car.png" alt="Small Car">
-                                                    Small cars
-                                                </a>
-                                            </div>
-                                            <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
-                                                <a href="javascript:void(0)" class="custom-links-filter">
-                                                    <img src="./Assets/Images/imported-car.png" alt="Automated Car">
-                                                    Imported cars
-                                                </a>
-                                            </div>
-                                            
-                                        </div>
-                                      
-                                    </div>
-                                  </div>
-                                  
-                                  
-                            </div>
-                        </section> 
-                        <!-- Search By models Section End -->
-                            <!-- Budget Car Section html Start -->
-                   <section class="section-padding ">
-                    <div class="container-xxl">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <h2 class="custom-text-primary custom-font-bold">Budget Friendly Family Cars</h2>
-                                    </div>
-                                    <a class="custom-link custom-text-primary" href="#">View All  Family Cars</a>
-                                </div>
-
-                            </div>
-
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                        <div class="row g-4 custom-padding-inner-section pb-0">
-                            <div class="col-12 col-md-6 col-xl-4 ">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper sucess"> Available</span>
-                                        <img src="./Assets/Images/audi-r6.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper grey"> Coming Soon</span>
-                                        <img src="./Assets/Images/bently.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-xl-4">
-                                <a href="javascript:void(0)" class="card-wrapper">
-                                    <div class="custom-card-img-wrapper">
-                                        <span class="custom-status-wrapper black"> Available</span>
-                                        <img src="./Assets/Images/cherry-car.png" alt="Car Image">
-                                    </div>
-                                    <div class="custom-card-body">
-                                        <div class="card-details-wrapper">
-                                            <div class="card-details-wrapper-image">
-                                                <img src="./Assets/Images/name.png" alt="">
-                                            </div>
-                                            <div class="card-details-text-wrapper">
-                                                <div class="card-details-text-wrapper-top">
-                                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
-                                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
-                                                </div>
-                                                <div class="card-details-text-wrapper-bottom">
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/calendar-grey.png" alt="calender">
-                                                        <p class="small-p">2017</p>
-                                                    </div>
-                                                    <div class="custom-image-text-wrap">
-                                                        <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
-                                                        <p class="small-p">152,000 km</p>
-                                                    </div>
-                                                  
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-                                      
-                                    </div>
-                                </a>
-                            </div>
-                           
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Best Sellers Section End -->
+         <!-- Search By Cars Section html Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                           <h2 class="custom-text-primary custom-font-bold">Search By Car Types</h2>
                         </div>
-                    </div>
-                </section> 
-                <!-- Budget Car  Section End -->
-                    <!-- Stats Section  Start -->
-                  <section class="section-padding">
-                    <div class="container-xxl">
-                        <div class="car-deals stats-section-wraper"  style="background: 
-                        url(./Assets/Images/circle-bg.png), 
-                        url(./Assets/Images/bg-design-left.png) , 
-                        linear-gradient(270deg, #141754 0%, #112374 28.33%, #0F2982 100%); 
-        
-                    ">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <h5 class="text-white pb-2">Learn From Stats</h5>
-                                    <h2 class="text-white custom-font-bold pb-4">Facts By Numbers</h2>
-                                </div>
-                                <div class="stats-section d-flex">
-                                    <div class="custom-links-filter">
-                                        <div class="custom-box-wrapper large-box-wrapper">
-                                            <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
-                                        </div>
-                                        <div class="ms-3">
-                                            <h4 class="custom-font-semibold custom-text-primary">150K+</h4>
-                                            <p class="text-grey small-p">Happy Customers</p>
-                                        </div>
-                                    </div>
-                                    <div class="custom-links-filter">
-                                        <div class="custom-box-wrapper large-box-wrapper">
-                                            <img src="./Assets/Images/driving.png" alt="Search Icon Image">
-                                        </div>
-                                        <div class="ms-3">
-                                            <h4 class="custom-font-semibold custom-text-primary">12K+</h4>
-                                            <p class="text-grey small-p">Count Of Cars</p>
-                                        </div>
-                                    </div>
-                                    <div class="custom-links-filter">
-                                        <div class="custom-box-wrapper large-box-wrapper">
-                                            <img src="./Assets/Images/gas-station.png" alt="Search Icon Image">
-                                        </div>
-                                        <div class="ms-3">
-                                            <h4 class="custom-font-semibold custom-text-primary">100K+</h4>
-                                            <p class="text-grey small-p">Car Solution</p>
-                                        </div>
-                                    </div>
-                                    <div class="custom-links-filter">
-                                        <div class="custom-box-wrapper large-box-wrapper">
-                                            <img src="./Assets/Images/speedometer.png" alt="Search Icon Image">
-                                        </div>
-                                        <div class="ms-3">
-                                            <h4 class="custom-font-semibold custom-text-primary">11M+</h4>
-                                            <p class="text-grey small-p">Total Kilometers</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="owl-carousel owl-theme custom-slider my-3">
+                  <div class="item">
+                     <div class="custom-slider-inner-items row g-4">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
                         </div>
-                    </div>
-                  </section>
-                   <!-- Stats Section  End -->
-                  
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2 ">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           4 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/old-car.png" alt="Old Car">
+                           Old Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="big Car">
+                           1300cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/1000cc.png" alt="Automated Car">
+                           1000cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5door-car.png" alt="Small Car">
+                           5 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
+                           Japanese cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           4 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/old-car.png" alt="Old Car">
+                           Old Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="big Car">
+                           1300cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/1000cc.png" alt="Automated Car">
+                           1000cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5door-car.png" alt="Small Car">
+                           5 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
+                           Japanese cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                     </div>
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           4 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/old-car.png" alt="Old Car">
+                           Old Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="big Car">
+                           1300cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/1000cc.png" alt="Automated Car">
+                           1000cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5door-car.png" alt="Small Car">
+                           5 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
+                           Japanese cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           4 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/old-car.png" alt="Old Car">
+                           Old Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="big Car">
+                           1300cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/1000cc.png" alt="Automated Car">
+                           1000cc cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5door-car.png" alt="Small Car">
+                           5 Door
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/japanese-car.png" alt="Japenese Car">
+                           Japanese cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Search By Cars Section End -->
+         <!-- Featured Section html Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                           <h2 class="custom-text-primary custom-font-bold">Featured Cars</h2>
+                        </div>
+                        <a class="custom-link custom-text-primary" href="#">View All  Featured Cars</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row g-4 custom-padding-inner-section pb-0">
+                  <div class="col-12 col-md-6 col-xl-4 ">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper sucess"> Available</span>
+                           <img src="./Assets/Images/audi-r6.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper grey"> Coming Soon</span>
+                           <img src="./Assets/Images/bently.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper black"> Available</span>
+                           <img src="./Assets/Images/cherry-car.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Featured Section End -->
+         <!-- New Models Section html Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                           <h2 class="custom-text-primary custom-font-bold">New Models</h2>
+                        </div>
+                        <a class="custom-link custom-text-primary" href="#">View All  New Models</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row g-4 custom-padding-inner-section pb-0">
+                  <div class="col-12 col-md-6 col-xl-4 ">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper sucess"> Available</span>
+                           <img src="./Assets/Images/audi-r6.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper grey"> Coming Soon</span>
+                           <img src="./Assets/Images/bently.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper black"> Available</span>
+                           <img src="./Assets/Images/cherry-car.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- New Models Section End -->
+         <!-- Search By models Section html Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                           <h2 class="custom-text-primary custom-font-bold">Search By Models</h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="owl-carousel owl-theme custom-slider my-3">
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/toyota-logo.png" alt="Toyota Car">
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/suzuki.png" alt="Suzuki Car">
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/honda-logo.png" alt="Honda Logo Car">
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/daihatsu.png" alt="Daihatsu Car">
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/nissan-logo.png" alt="Nissan Car">
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/kia.png" alt="kia Car">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="custom-slider-inner-items">
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/automated-car.png" alt="Automated Car">
+                           Automatic cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/family-car.png" alt="Automated Car">
+                           Family Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/big-car.png" alt="big Car">
+                           Big Cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/5seater-car.png" alt="Automated Car">
+                           5 Seater
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/small-new-car.png" alt="Small Car">
+                           Small cars
+                           </a>
+                        </div>
+                        <div class=" col-6 col-md-4 col-lg-3 col-xl-3 col-xxl-2">
+                           <a href="javascript:void(0)" class="custom-links-filter">
+                           <img src="./Assets/Images/imported-car.png" alt="Automated Car">
+                           Imported cars
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Search By models Section End -->
+         <!-- Budget Car Section html Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                           <h2 class="custom-text-primary custom-font-bold">Budget Friendly Family Cars</h2>
+                        </div>
+                        <a class="custom-link custom-text-primary" href="#">View All  Family Cars</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row g-4 custom-padding-inner-section pb-0">
+                  <div class="col-12 col-md-6 col-xl-4 ">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper sucess"> Available</span>
+                           <img src="./Assets/Images/audi-r6.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper grey"> Coming Soon</span>
+                           <img src="./Assets/Images/bently.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="col-12 col-md-6 col-xl-4">
+                     <a href="javascript:void(0)" class="card-wrapper">
+                        <div class="custom-card-img-wrapper">
+                           <span class="custom-status-wrapper black"> Available</span>
+                           <img src="./Assets/Images/cherry-car.png" alt="Car Image">
+                        </div>
+                        <div class="custom-card-body">
+                           <div class="card-details-wrapper">
+                              <div class="card-details-wrapper-image">
+                                 <img src="./Assets/Images/name.png" alt="">
+                              </div>
+                              <div class="card-details-text-wrapper">
+                                 <div class="card-details-text-wrapper-top">
+                                    <p class="custom-text-black custom-font-semibold">Alfa Romeo Giulia Sprint</p>
+                                    <p class="custom-text-black custom-font-semibold">$345.00</p>
+                                 </div>
+                                 <div class="card-details-text-wrapper-bottom">
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/calendar-grey.png" alt="calender">
+                                       <p class="small-p">2017</p>
+                                    </div>
+                                    <div class="custom-image-text-wrap">
+                                       <img src="./Assets/Images/car-milage.png" alt="car milage Icon">
+                                       <p class="small-p">152,000 km</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Budget Car  Section End -->
+         <!-- Stats Section  Start -->
+         <section class="section-padding">
+            <div class="container-xxl">
+               <div class="car-deals stats-section-wraper"  style="background: 
+                  url(./Assets/Images/circle-bg.png), 
+                  url(./Assets/Images/bg-design-left.png) , 
+                  linear-gradient(270deg, #141754 0%, #112374 28.33%, #0F2982 100%); 
+                  ">
+                  <div class="row">
+                     <div class="col-12 text-center">
+                        <h5 class="text-white pb-2">Learn From Stats</h5>
+                        <h2 class="text-white custom-font-bold pb-4">Facts By Numbers</h2>
+                     </div>
+                     <div class="stats-section d-flex">
+                        <div class="custom-links-filter">
+                           <div class="custom-box-wrapper large-box-wrapper">
+                              <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
+                           </div>
+                           <div class="ms-3">
+                              <h4 class="custom-font-semibold custom-text-primary">150K+</h4>
+                              <p class="text-grey small-p">Happy Customers</p>
+                           </div>
+                        </div>
+                        <div class="custom-links-filter">
+                           <div class="custom-box-wrapper large-box-wrapper">
+                              <img src="./Assets/Images/driving.png" alt="Search Icon Image">
+                           </div>
+                           <div class="ms-3">
+                              <h4 class="custom-font-semibold custom-text-primary">12K+</h4>
+                              <p class="text-grey small-p">Count Of Cars</p>
+                           </div>
+                        </div>
+                        <div class="custom-links-filter">
+                           <div class="custom-box-wrapper large-box-wrapper">
+                              <img src="./Assets/Images/gas-station.png" alt="Search Icon Image">
+                           </div>
+                           <div class="ms-3">
+                              <h4 class="custom-font-semibold custom-text-primary">100K+</h4>
+                              <p class="text-grey small-p">Car Solution</p>
+                           </div>
+                        </div>
+                        <div class="custom-links-filter">
+                           <div class="custom-box-wrapper large-box-wrapper">
+                              <img src="./Assets/Images/speedometer.png" alt="Search Icon Image">
+                           </div>
+                           <div class="ms-3">
+                              <h4 class="custom-font-semibold custom-text-primary">11M+</h4>
+                              <p class="text-grey small-p">Total Kilometers</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Stats Section  End -->
          <!-- Customer Reviews Section Start -->
          <section class="section-padding ">
             <div class="container-xxl">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h5 class="custom-text-primary pb-2">Learn About Us</h5>
-                        <h2 class="custom-text-primary custom-font-bold pb-4">What Our Customers Are Saying About Us</h2>
-                    </div>
-                    <div class="grid-container mt-4">
-                        <div class="grid-item custom-white-card-wrapper short">
-                            <div class="d-flex align-items-center">
-                                <img src="./Assets/Images/profile-circle.png" alt="Customer Image" class="customer-img">
-                                <div class="ms-2">
-                                    <p class="custom-text-black">Sarah L</p>
-                                    <p class="small-p ">Shopper</p>
-                                </div>
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <h5 class="custom-text-primary pb-2">Learn About Us</h5>
+                     <h2 class="custom-text-primary custom-font-bold pb-4">What Our Customers Are Saying About Us</h2>
+                  </div>
+                  <div class="grid-container mt-4">
+                     <div class="grid-item custom-white-card-wrapper short">
+                        <div class="d-flex align-items-center">
+                           <img src="./Assets/Images/profile-circle.png" alt="Customer Image" class="customer-img">
+                           <div class="ms-2">
+                              <p class="custom-text-black">Sarah L</p>
+                              <p class="small-p ">Shopper</p>
+                           </div>
                         </div>
                         <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-3">Selling my car was effortless with this service! Quick offer, paperwork handled. Highly recommended!</p>
                         <p class="custom-text-small">Oct 15, 2023</p>
+                     </div>
+                     <div class="grid-item custom-white-card-wrapper tall">
+                        <div class="d-flex align-items-center">
+                           <img src="./Assets/Images/micheal-p.png" alt="Customer Image" class="customer-img">
+                           <div class="ms-2">
+                              <p class="custom-text-black">Michael P</p>
+                              <p class="small-p ">Shopper</p>
+                           </div>
                         </div>
-                        <div class="grid-item custom-white-card-wrapper tall">  <div class="d-flex align-items-center">
-                            <img src="./Assets/Images/micheal-p.png" alt="Customer Image" class="customer-img">
-                            <div class="ms-2">
-                                <p class="custom-text-black">Michael P</p>
-                                <p class="small-p ">Shopper</p>
-                            </div>
-                    </div>
-                    <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-5">Initially hesitant to part with my car due to its rough condition, but this company surprised me. Their generous offer surpassed my expectations, and they effortlessly managed every detail of the sale. I couldn't be more pleased with the outcome.</p>
-                    <p class="custom-text-small">Aug 22, 2023</p></div>
-                        <div class="grid-item custom-white-card-wrapper short">
-                            <div class="d-flex align-items-center">
-                                <img src="./Assets/Images/customer1.png" alt="Customer Image" class="customer-img">
-                                <div class="ms-2">
-                                    <p class="custom-text-black">Mark R</p>
-                                    <p class="small-p ">Shopper</p>
-                                </div>
+                        <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-5">Initially hesitant to part with my car due to its rough condition, but this company surprised me. Their generous offer surpassed my expectations, and they effortlessly managed every detail of the sale. I couldn't be more pleased with the outcome.</p>
+                        <p class="custom-text-small">Aug 22, 2023</p>
+                     </div>
+                     <div class="grid-item custom-white-card-wrapper short">
+                        <div class="d-flex align-items-center">
+                           <img src="./Assets/Images/customer1.png" alt="Customer Image" class="customer-img">
+                           <div class="ms-2">
+                              <p class="custom-text-black">Mark R</p>
+                              <p class="small-p ">Shopper</p>
+                           </div>
                         </div>
                         <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-3" >Struggled to sell my car for weeks, but this company changed everything. Great offer, hassle-free paperwork. Selling was a breeze.</p>
                         <p class="custom-text-small">Jan 08, 2024</p>
-                        </div>
-                        <div class="grid-item custom-white-card-wrapper short">
-                            <div class="d-flex align-items-center">
-                                <img src="./Assets/Images/profile-circle.png" alt="Customer Image" class="customer-img">
-                                <div class="ms-2">
-                                    <p class="custom-text-black">Emily S</p>
-                                    <p class="small-p ">Shopper</p>
-                                </div>
+                     </div>
+                     <div class="grid-item custom-white-card-wrapper short">
+                        <div class="d-flex align-items-center">
+                           <img src="./Assets/Images/profile-circle.png" alt="Customer Image" class="customer-img">
+                           <div class="ms-2">
+                              <p class="custom-text-black">Emily S</p>
+                              <p class="small-p ">Shopper</p>
+                           </div>
                         </div>
                         <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-3">As someone who lives outside Philadelphia, I was worried about finding a buyer for my car. Luckily, this company buys cars from all over, and they made the entire process incredibly convenient. Would definitely use their service again.</p>
                         <p class="custom-text-small">Oct 28, 2023</p>
-                        </div>
-                        <div class="grid-item custom-white-card-wrapper short">
-                            <div class="d-flex align-items-center">
-                                <img src="./Assets/Images/profile-circle.png" alt="Customer Image" class="customer-img">
-                                <div class="ms-2">
-                                    <p class="custom-text-black">Jessica M</p>
-                                    <p class="small-p ">Shopper</p>
-                                </div>
+                     </div>
+                     <div class="grid-item custom-white-card-wrapper short">
+                        <div class="d-flex align-items-center">
+                           <img src="./Assets/Images/profile-circle.png" alt="Customer Image" class="customer-img">
+                           <div class="ms-2">
+                              <p class="custom-text-black">Jessica M</p>
+                              <p class="small-p ">Shopper</p>
+                           </div>
                         </div>
                         <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-3">I was impressed by the professionalism and efficiency of this service. They provided excellent customer support throughout the entire process, and I was able to sell my car quickly and hassle-free. Definitely recommend giving them a try!</p>
                         <p class="custom-text-small">Feb 04, 2024</p>
-                        </div>
-                        <div class="grid-item custom-white-card-wrapper short">
-                            <div class="d-flex align-items-center">
-                                <img src="./Assets/Images/david-r.png" alt="Customer Image" class="customer-img">
-                                <div class="ms-2">
-                                    <p class="custom-text-black">David H</p>
-                                    <p class="small-p ">Shopper</p>
-                                </div>
+                     </div>
+                     <div class="grid-item custom-white-card-wrapper short">
+                        <div class="d-flex align-items-center">
+                           <img src="./Assets/Images/david-r.png" alt="Customer Image" class="customer-img">
+                           <div class="ms-2">
+                              <p class="custom-text-black">David H</p>
+                              <p class="small-p ">Shopper</p>
+                           </div>
                         </div>
                         <p class="mt-3 mb-4 custom-text-eclipse custom-text-wrap-3">I needed to sell my car quickly, and this service delivered. From the initial contact to the final sale, the process was smooth and efficient. Thank you for making it so easy!</p>
                         <p class="custom-text-small">Apr 20, 2023</p>
-                        </div>
-                      
-                    </div>
-                      
-                      
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </section>
-   
-                     <!-- Contact Us Section Start -->
-                     <section class="section-padding ">
-                        <div class="container-xxl">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <div class="custom-medium-container">
-                                        <h2 class="custom-text-primary custom-font-bold pb-4">Contact Us And We’ll Reach Out To You Soon</h2>
-                                        <p class="mt-2 mb-4 px-5">Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more</p>
-                                        <a class="custom-secondary-button custom-btn" href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
+         </section>
+         <!-- Contact Us Section Start -->
+         <section class="section-padding ">
+            <div class="container-xxl">
+               <div class="row">
+                  <div class="col-12 text-center">
+                     <div class="custom-medium-container">
+                        <h2 class="custom-text-primary custom-font-bold pb-4">Contact Us And We’ll Reach Out To You Soon</h2>
+                        <p class="mt-2 mb-4 px-5">Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more</p>
+                        <a class="custom-secondary-button custom-btn" href="#">Contact Us</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Contact Us Section End -->
+         <!-- Footer Section Start -->
+         <footer class="footer-wrapper">
+            <div class="container-xxl">
+               <div class="row g-4">
+                  <div class="col-md-12 col-lg-5">
+                     <div class="footer-contact-section">
+                        <img src="./Assets/Images/footer-logo.png" alt="footer logo">
+                        <div class="d-flex py-4">
+                           <a class="orange-filled-btn custom-btn small-btn me-4" href="#">Buy A Car</a>
+                           <a class="white-outline-filled-btn custom-btn small-btn" href="#">Contact Us</a>
                         </div>
-                      </section>
-                    <!-- Contact Us Section End -->
-                    
-                <!-- Footer Section Start -->
-                <footer class="footer-wrapper">
-                    <div class="container-xxl">
-                        <div class="row g-4">
-                                <div class="col-md-12 col-lg-5">
-                                    <div class="footer-contact-section">
-                                        <img src="./Assets/Images/footer-logo.png" alt="footer logo">
-                                        <div class="d-flex py-4">
-                                            <a class="orange-filled-btn custom-btn small-btn me-4" href="#">Buy A Car</a>
-                                            <a class="white-outline-filled-btn custom-btn small-btn" href="#">Contact Us</a>
-                                        </div>
-                                        <div class="footer-contact-inner-section">
-                                            <div class="d-flex align-items-center">
-                                                <p class="custom-font-bold">WhatsApp</p>
-                                                <a href="https://wa.me/112342372323" class="custom-link ps-2">:+(1) 234 237-2323</a>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <p class="custom-font-bold">Email</p>
-                                                <a href="mailto:hello@carwaley.com" class="custom-link ps-2">:hello@carwaley.com</a>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <p class="custom-font-bold">Address</p>
-                                                <p class="ps-2 pe-5">:1502 alter st Philadelphia <br> pa 19146</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-2">
-                                    <div class="footer-menu-links">
-                                        <p class="custom-font-bold text-white pb-2">Menus</p>
-                                        <ul class="footer-nav-links">
-                                           <li><a href="./allCars.html">All Cars</a></li>
-                                            <li><a href="javascript:void(0)">About Us</a></li>
-                                            <li><a href="javascript:void(0)">Blogs</a></li>
-                                            <li><a href="javascript:void(0)">Reviews</a></li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-2">
-                                    <div class="footer-menu-links">
-                                        <p class="custom-font-bold text-white pb-2">Get Help</p>
-                                        <ul class="footer-nav-links">
-                                            <li><a href="javascript:void(0)">Contact Us</a></li>
-                                            <li><a href="javascript:void(0)">Privacy Policy</a></li>
-                                            <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-3">
-                                    <div class="social-media-links">
-                                        <p class="custom-font-bold text-white pb-2">Social Link</p>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:void(0)" class="social-link"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="social-link"><i class="fab fa-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="social-link"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                            </li>
-                                        </ul>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="patent-section-footer">
-                                        <p>All rights reserved </p>
-                                        <p>Copyright 2024 By CarWalay</p>
-
-                                    </div>
-                                </div>
+                        <div class="footer-contact-inner-section">
+                           <div class="d-flex align-items-center">
+                              <p class="custom-font-bold">WhatsApp</p>
+                              <a href="https://wa.me/112342372323" class="custom-link ps-2">:+(1) 234 237-2323</a>
+                           </div>
+                           <div class="d-flex align-items-center">
+                              <p class="custom-font-bold">Email</p>
+                              <a href="mailto:hello@carwaley.com" class="custom-link ps-2">:hello@carwaley.com</a>
+                           </div>
+                           <div class="d-flex align-items-center">
+                              <p class="custom-font-bold">Address</p>
+                              <p class="ps-2 pe-5">:1502 alter st Philadelphia <br> pa 19146</p>
+                           </div>
                         </div>
-                    </div>
-                  </footer>
-                    <!-- Footer Section End -->
-
-    </div>
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="./Assets/Js/custom.js"></script>
-</body>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-2">
+                     <div class="footer-menu-links">
+                        <p class="custom-font-bold text-white pb-2">Menus</p>
+                        <ul class="footer-nav-links">
+                           <li><a href="./allCars.html">All Cars</a></li>
+                           <li><a href="javascript:void(0)">About Us</a></li>
+                           <li><a href="javascript:void(0)">Blogs</a></li>
+                           <li><a href="javascript:void(0)">Reviews</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-2">
+                     <div class="footer-menu-links">
+                        <p class="custom-font-bold text-white pb-2">Get Help</p>
+                        <ul class="footer-nav-links">
+                           <li><a href="javascript:void(0)">Contact Us</a></li>
+                           <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                           <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3">
+                     <div class="social-media-links">
+                        <p class="custom-font-bold text-white pb-2">Social Link</p>
+                        <ul>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-instagram"></i></a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-facebook"></i></a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-twitter"></i></a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-linkedin"></i></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-12">
+                     <div class="patent-section-footer">
+                        <p>All rights reserved </p>
+                        <p>Copyright 2024 By CarWalay</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- Footer Section End -->
+      </div>
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script src="./Assets/Js/custom.js"></script>
+   </body>
 </html>
