@@ -6,6 +6,8 @@ $(document).ready(function(){
       $('.sidebar-wrapper').toggleClass('show');
       document.body.style.overflow = "hidden"; // Disable scrolling on the body
   });
+  $( "#datepicker" ).datepicker();
+
   $('.close-btn-filter-sidebar').on('click', function(){
     $('.sidebar-wrapper').removeClass('show');
     document.body.style.overflow = "scroll"; // Disable scrolling on the body
