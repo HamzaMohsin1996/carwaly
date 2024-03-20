@@ -100,6 +100,9 @@ button{
 a.custom-text-primary{
     color: #0F2882 !important;
 }
+.custom-seondary-color{
+    color: #FF5450 !important;
+}
 
 .text-grey-light{
     color: #677489;
@@ -1265,8 +1268,22 @@ input[type=number]::-webkit-outer-spin-button {
 .blog-page-banner img{
     max-height: 450px;
 }
+/* About Us page Css */
 
+.about-us-vision-mission{
+    padding: 80px;
+    background-position: bottom right !important;
+}
+.total-cars-sale{
+    background-repeat: no-repeat !important;
+    background-position: top right !important;
+}
 
+.our-corporate-section .car-deals{
+    background-size:20%,contain !important;
+    background-position: left 10% top !important;
+    padding: 140px 80px;
+}
 
 
 
