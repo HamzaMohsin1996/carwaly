@@ -169,6 +169,10 @@ a.custom-text-primary{
     position: relative;
     
 }
+.custom-date-picker.mw-auto{
+    max-width: unset !important;
+    margin: 0;
+}
 .custom-date-picker input{
     padding: 16px 20px;
     border-radius: 4px;
@@ -1254,11 +1258,28 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Contact us page Css */
 .contact-us-banner{
-    padding: 140px 0 60px;
+    padding: 0;
     height: auto !important;
+    background-size: cover !important;
+    position: relative;
+}
+.contact-us-banner::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom:0;
+    right: 0;
+    background: linear-gradient(270deg, #141754 0%, #112374 28.33%, #0F2982 100%);
+    opacity: 0.8;
+}
+.contact-us-banner .banner-inner-section-wrapper{
+    position: relative;
+    z-index: 1;
 }
 .contact-us-banner .banner-inner-section-wrapper{
     max-width: 100%;
+    padding: 150px 0;
 }
 .contact-us-banner .banner-inner-section-wrapper p{
     color: white;
@@ -1285,8 +1306,60 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 140px 80px;
 }
 
-
-
+.custom-modal-popup .modal-header,.custom-modal-popup  .modal-footer{
+    border: none;
+}
+.custom-modal-popup  .modal-body{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.custom-modal-popup  .modal-body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .custom-modal-popup  .modal-body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background:  #F5F7FA;
+  }
+   
+  /* Handle */
+  .custom-modal-popup  .modal-body::-webkit-scrollbar-thumb {
+    background: #FF5450;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  .custom-modal-popup  .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #FF5450; 
+  }
+  .custom-modal-popup  .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .custom-btn-close{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    border:2px solid #1C1C45;
+    padding: 5px;
+  }
+  .custom-btn-close i{
+    font-size: 14px;
+    margin-left: 2px;
+    padding-bottom: 8px;
+  }
+  .custom-ul-modal li{
+    font-size: 14px;
+    color: #575E8D;
+  }
+  .custom-modal-popup p{
+    color: #575E8D !important;
+  }
 @media (max-width: 1441px) {
     p{
         font-size: 16px;
@@ -1294,6 +1367,9 @@ input[type=number]::-webkit-outer-spin-button {
     .small-p{
         font-size: 12px;
     }
+    .custom-ul-modal li{
+        font-size: 12px;
+      }
     .card-details-wrapper-image {
         width: 48px;
         height: 48px;
