@@ -19,21 +19,24 @@
    </head>
    <body>
       <div class="main-wrapper">
-         <!-- Header html Start -->
-         <header class="navbar navbar-expand-lg fixed-top custom-header">
+          <!-- Header html Start -->
+          <header class="navbar navbar-expand-lg fixed-top custom-header">
             <div class="container-xxl">
                <a class="navbar-brand" href="./index.html">
                <img src="./Assets/Images/logo.png" alt="CarWalay Logo">
                </a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <button class="navbar-toggler" id="custom-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
-               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+               <div class="collapse navbar-collapse justify-content-end custom-mobile-menu" id="navbarNav">
+                  <div class="navbar-collapse-btn">
+                     <button id="close-sidebar-btn"><i class="fa fa-times"></i></button>
+                  </div>
                   <ul class="navbar-nav align-items-center">
                      <!-- Container for All Cars button and dropdown menu -->
                      <div class="dropdown-container">
                         <li class="nav-item">
-                           <a class="nav-link allCarsBtn" href="./allCars.html" >All Cars</a>
+                           <a class="nav-link allCarsBtn" id="dropdown-menu-button" href="./allCars.html" >All Cars <i class="fa fa-angle-right"></i></a>
                            <!-- Dropdown Menu for All Cars -->
                            <div class="dropdown-menu dropdown-menu-wide allCarsDropdown" >
                               <div class="container">
@@ -41,38 +44,38 @@
                                     <div class="col-md-6">
                                        <p class="small-p text-grey">Find Cars By Types</p>
                                        <div class="row g-4 my-2">
-                                          <div class="col-12 col-md-6 col-lg-4">
-                                             <a href="javascript:void(0)" class="filter-cars">
+                                          <div class="col-sm-4">
+                                             <a href="./filters.html" class="filter-cars">
                                              <img src="./Assets/Images/family-car.png" alt="Family Car">
                                              Family Cars
                                              </a>
                                           </div>
-                                          <div class="col-12 col-md-6 col-lg-4">
-                                             <a href="javascript:void(0)" class="filter-cars">
+                                          <div class="col-sm-4">
+                                             <a href="./filters.html" class="filter-cars">
                                              <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
                                              1300cc cars
                                              </a>
                                           </div>
-                                          <div class="col-12 col-md-6 col-lg-4">
-                                             <a href="javascript:void(0)" class="filter-cars">
+                                          <div class="col-sm-4">
+                                             <a href="./filters.html" class="filter-cars">
                                              <img src="./Assets/Images/5seater.png" alt="5seater Car">
                                              5 Seater
                                              </a>
                                           </div>
-                                          <div class="col-12 col-md-6 col-lg-4">
-                                             <a href="javascript:void(0)" class="filter-cars">
+                                          <div class="col-sm-4">
+                                             <a href="./filters.html" class="filter-cars">
                                              <img src="./Assets/Images/imported-car.png" alt="Imported Car">
                                              Imported cars
                                              </a>
                                           </div>
-                                          <div class="col-12 col-md-6 col-lg-4">
-                                             <a href="javascript:void(0)" class="filter-cars">
+                                          <div class="col-sm-4">
+                                             <a href="./filters.html" class="filter-cars">
                                              <img src="./Assets/Images/small-car.png" alt="Small Car">
                                              Small cars
                                              </a>
                                           </div>
-                                          <div class="col-12 col-md-6 col-lg-4">
-                                             <a href="javascript:void(0)" class="filter-cars">
+                                          <div class="col-sm-4">
+                                             <a href="./filters.html" class="filter-cars">
                                              <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
                                              1300cc cars
                                              </a>
@@ -87,7 +90,7 @@
                                        <p class="small-p text-grey mb-2">Find Cars By Types</p>
                                        <ul>
                                           <li class="py-2">
-                                             <a href="#" class="filter-by-car-types">
+                                             <a href="./allCars.html" class="filter-by-car-types">
                                                 <div class="d-flex align-items-center justify-content-between">
                                                    <div class="custom-box-wrapper mx-auto custom-box-small">
                                                       <img src="./Assets/Images/info-circle.png" alt="Search Icon Image">
@@ -101,7 +104,7 @@
                                              </a>
                                           </li>
                                           <li class="py-2">
-                                             <a href="#" class="filter-by-car-types">
+                                             <a href="./allCars.html" class="filter-by-car-types">
                                                 <div class="d-flex align-items-center justify-content-between">
                                                    <div class="custom-box-wrapper mx-auto custom-box-small">
                                                       <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
@@ -115,7 +118,7 @@
                                              </a>
                                           </li>
                                           <li class="py-2">
-                                             <a href="#" class="filter-by-car-types">
+                                             <a href="./allCars.html" class="filter-by-car-types">
                                                 <div class="d-flex align-items-center justify-content-between">
                                                    <div class="custom-box-wrapper mx-auto custom-box-small">
                                                       <img src="./Assets/Images/eye.png" alt="Search Icon Image">
@@ -129,7 +132,7 @@
                                              </a>
                                           </li>
                                           <li class="py-2">
-                                             <a href="#" class="filter-by-car-types">
+                                             <a href="./allCars.html" class="filter-by-car-types">
                                                 <div class="d-flex align-items-center justify-content-between">
                                                    <div class="custom-box-wrapper mx-auto custom-box-small">
                                                       <img src="./Assets/Images/24-support.png" alt="Search Icon Image">
