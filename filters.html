@@ -19,160 +19,160 @@
    </head>
    <body>
       <div class="main-wrapper">
-          <!-- Header html Start -->
-          <header class="navbar navbar-expand-lg fixed-top custom-header">
-            <div class="container-xxl">
-               <a class="navbar-brand" href="./index.html">
-               <img src="./Assets/Images/logo.png" alt="CarWalay Logo">
-               </a>
-               <button class="navbar-toggler" id="custom-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse justify-content-end custom-mobile-menu" id="navbarNav">
-                  <div class="navbar-collapse-btn">
-                     <button id="close-sidebar-btn"><i class="fa fa-times"></i></button>
-                  </div>
-                  <ul class="navbar-nav align-items-center">
-                     <!-- Container for All Cars button and dropdown menu -->
-                     <div class="dropdown-container">
-                        <li class="nav-item">
-                           <a class="nav-link allCarsBtn" id="dropdown-menu-button" href="./allCars.html" >All Cars <i class="fa fa-angle-right"></i></a>
-                           <!-- Dropdown Menu for All Cars -->
-                           <div class="dropdown-menu dropdown-menu-wide allCarsDropdown" >
-                              <div class="container">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <p class="small-p text-grey">Find Cars By Types</p>
-                                       <div class="row g-4 my-2">
-                                          <div class="col-sm-4">
-                                             <a href="./filters.html" class="filter-cars">
-                                             <img src="./Assets/Images/family-car.png" alt="Family Car">
-                                             Family Cars
-                                             </a>
+            <!-- Header html Start -->
+            <header class="navbar navbar-expand-lg fixed-top custom-header">
+               <div class="container-xxl">
+                  <a class="navbar-brand" href="./index.html">
+                  <img src="./Assets/Images/logo.png" alt="CarWalay Logo">
+                  </a>
+                  <button class="navbar-toggler" id="custom-navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end custom-mobile-menu" id="navbarNav">
+                     <div class="navbar-collapse-btn">
+                        <button id="close-sidebar-btn"><i class="fa fa-times"></i></button>
+                     </div>
+                     <ul class="navbar-nav align-items-center">
+                        <!-- Container for All Cars button and dropdown menu -->
+                        <div class="dropdown-container">
+                           <li class="nav-item">
+                              <a class="nav-link allCarsBtn hover-link-hover" id="dropdown-menu-button" href="./allCars.html" >All Cars <i class="fa fa-angle-right"></i></a>
+                              <!-- Dropdown Menu for All Cars -->
+                              <div class="dropdown-menu dropdown-menu-wide allCarsDropdown" >
+                                 <div class="container">
+                                    <div class="row">
+                                       <div class="col-12 col-sm-6">
+                                          <p class="small-p text-grey">Find Cars By Types</p>
+                                          <div class="row g-4 my-2">
+                                             <div class="col-4">
+                                                <a href="./filters.html" class="filter-cars">
+                                                <img src="./Assets/Images/family-car.png" alt="Family Car">
+                                                Family Cars
+                                                </a>
+                                             </div>
+                                             <div class="col-4">
+                                                <a href="./filters.html" class="filter-cars">
+                                                <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
+                                                1300cc cars
+                                                </a>
+                                             </div>
+                                             <div class="col-4">
+                                                <a href="./filters.html" class="filter-cars">
+                                                <img src="./Assets/Images/5seater.png" alt="5seater Car">
+                                                5 Seater
+                                                </a>
+                                             </div>
+                                             <div class="col-4">
+                                                <a href="./filters.html" class="filter-cars">
+                                                <img src="./Assets/Images/imported-car.png" alt="Imported Car">
+                                                Imported cars
+                                                </a>
+                                             </div>
+                                             <div class="col-4">
+                                                <a href="./filters.html" class="filter-cars">
+                                                <img src="./Assets/Images/small-car.png" alt="Small Car">
+                                                Small cars
+                                                </a>
+                                             </div>
+                                             <div class="col-4">
+                                                <a href="./filters.html" class="filter-cars">
+                                                <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
+                                                1300cc cars
+                                                </a>
+                                             </div>
                                           </div>
-                                          <div class="col-sm-4">
-                                             <a href="./filters.html" class="filter-cars">
-                                             <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
-                                             1300cc cars
-                                             </a>
-                                          </div>
-                                          <div class="col-sm-4">
-                                             <a href="./filters.html" class="filter-cars">
-                                             <img src="./Assets/Images/5seater.png" alt="5seater Car">
-                                             5 Seater
-                                             </a>
-                                          </div>
-                                          <div class="col-sm-4">
-                                             <a href="./filters.html" class="filter-cars">
-                                             <img src="./Assets/Images/imported-car.png" alt="Imported Car">
-                                             Imported cars
-                                             </a>
-                                          </div>
-                                          <div class="col-sm-4">
-                                             <a href="./filters.html" class="filter-cars">
-                                             <img src="./Assets/Images/small-car.png" alt="Small Car">
-                                             Small cars
-                                             </a>
-                                          </div>
-                                          <div class="col-sm-4">
-                                             <a href="./filters.html" class="filter-cars">
-                                             <img src="./Assets/Images/1300cc.png" alt="1300cc Car">
-                                             1300cc cars
-                                             </a>
-                                          </div>
+                                          <p class="small-p text-grey py-3">Find Cars By City</p>
+                                          <ul class="filter-by-city">
+                                             <li><a href="#" class="extra-small-text">Philadelphia</a></li>
+                                          </ul>
                                        </div>
-                                       <p class="small-p text-grey py-3">Find Cars By City</p>
-                                       <ul class="filter-by-city">
-                                          <li><a href="#" class="extra-small-text">Philadelphia</a></li>
-                                       </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <p class="small-p text-grey mb-2">Find Cars By Types</p>
-                                       <ul>
-                                          <li class="py-2">
-                                             <a href="./allCars.html" class="filter-by-car-types">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                      <img src="./Assets/Images/info-circle.png" alt="Search Icon Image">
+                                       <div class="col-12 col-sm-6">
+                                          <p class="small-p text-grey mb-2">Find Cars By Types</p>
+                                          <ul>
+                                             <li class="py-2">
+                                                <a href="./allCars.html" class="filter-by-car-types">
+                                                   <div class="d-flex align-items-center justify-content-between ">
+                                                      <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                         <img src="./Assets/Images/info-circle.png" alt="Search Icon Image">
+                                                      </div>
+                                                      <div class="mx-3">
+                                                         <p class="custom-font-bold-extra custom-text-small custom-text-black">Reviews</p>
+                                                         <p class="small-p text-grey-light">Read what others are saying</p>
+                                                      </div>
                                                    </div>
-                                                   <div class="mx-3">
-                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">Reviews</p>
-                                                      <p class="small-p text-grey-light">Read what others are saying</p>
+                                                   <i class="fa fa-solid fa-arrow-right"></i>
+                                                </a>
+                                             </li>
+                                             <li class="py-2">
+                                                <a href="./allCars.html" class="filter-by-car-types">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                         <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
+                                                      </div>
+                                                      <div class="mx-3">
+                                                         <p class="custom-font-bold-extra custom-text-small custom-text-black">Cars</p>
+                                                         <p class="small-p text-grey-light">Search from a pool of options</p>
+                                                      </div>
                                                    </div>
-                                                </div>
-                                                <i class="fa fa-solid fa-arrow-right"></i>
-                                             </a>
-                                          </li>
-                                          <li class="py-2">
-                                             <a href="./allCars.html" class="filter-by-car-types">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                      <img src="./Assets/Images/mini-car.png" alt="Search Icon Image">
+                                                   <i class="fa fa-solid fa-arrow-right"></i>
+                                                </a>
+                                             </li>
+                                             <li class="py-2">
+                                                <a href="./allCars.html" class="filter-by-car-types">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                         <img src="./Assets/Images/eye.png" alt="Search Icon Image">
+                                                      </div>
+                                                      <div class="mx-3">
+                                                         <p class="custom-font-bold-extra custom-text-small custom-text-black">View All</p>
+                                                         <p class="small-p text-grey-light">Discover Everything</p>
+                                                      </div>
                                                    </div>
-                                                   <div class="mx-3">
-                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">Cars</p>
-                                                      <p class="small-p text-grey-light">Search from a pool of options</p>
+                                                   <i class="fa fa-solid fa-arrow-right"></i>
+                                                </a>
+                                             </li>
+                                             <li class="py-2">
+                                                <a href="./allCars.html" class="filter-by-car-types">
+                                                   <div class="d-flex align-items-center justify-content-between">
+                                                      <div class="custom-box-wrapper mx-auto custom-box-small">
+                                                         <img src="./Assets/Images/24-support.png" alt="Search Icon Image">
+                                                      </div>
+                                                      <div class="mx-3">
+                                                         <p class="custom-font-bold-extra custom-text-small custom-text-black">Support</p>
+                                                         <p class="small-p text-grey-light">Contact us for more details</p>
+                                                      </div>
                                                    </div>
-                                                </div>
-                                                <i class="fa fa-solid fa-arrow-right"></i>
-                                             </a>
-                                          </li>
-                                          <li class="py-2">
-                                             <a href="./allCars.html" class="filter-by-car-types">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                      <img src="./Assets/Images/eye.png" alt="Search Icon Image">
-                                                   </div>
-                                                   <div class="mx-3">
-                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">View All</p>
-                                                      <p class="small-p text-grey-light">Discover Everything</p>
-                                                   </div>
-                                                </div>
-                                                <i class="fa fa-solid fa-arrow-right"></i>
-                                             </a>
-                                          </li>
-                                          <li class="py-2">
-                                             <a href="./allCars.html" class="filter-by-car-types">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                   <div class="custom-box-wrapper mx-auto custom-box-small">
-                                                      <img src="./Assets/Images/24-support.png" alt="Search Icon Image">
-                                                   </div>
-                                                   <div class="mx-3">
-                                                      <p class="custom-font-bold-extra custom-text-small custom-text-black">Support</p>
-                                                      <p class="small-p text-grey-light">Contact us for more details</p>
-                                                   </div>
-                                                </div>
-                                                <i class="fa fa-solid fa-arrow-right"></i>
-                                             </a>
-                                          </li>
-                                       </ul>
+                                                   <i class="fa fa-solid fa-arrow-right"></i>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
-                           </div>
+                           </li>
+                        </div>
+                        <li class="nav-item">
+                           <a class="nav-link" href="./aboutUs.html">About Us</a>
                         </li>
-                     </div>
-                     <li class="nav-item">
-                        <a class="nav-link" href="./aboutUs.html">About Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="./reviews.html">Reviews</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="./blog.html">Blogs</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="./contactUs.html">Contact Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="orange-filled-btn custom-btn" href="https://wa.me/18564092768">
-                        <span><i class="fab fa-whatsapp"></i></span> +(1) 856 409-2768</a>
-                     </li>
-                  </ul>
+                        <li class="nav-item">
+                           <a class="nav-link" href="./reviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="./blog.html">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="./contactUs.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="orange-filled-btn custom-btn" href="https://wa.me/18564092768">
+                           <span><i class="fab fa-whatsapp"></i></span> +(1) 856 409-2768</a>
+                        </li>
+                     </ul>
+                  </div>
                </div>
-            </div>
-         </header>
-         <!-- Header html end -->
+            </header>
+            <!-- Header html end -->
          <div class="main-wrapper-inner">
             <div class="container-fluid">
                <div class="row">
@@ -318,7 +318,7 @@
                            </div>
                         </div>
                         <div class="row g-4 custom-padding-inner-section pb-0">
-                           <div class="col-12 col-md-6 col-xl-4 ">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper sucess"> Available</span>
@@ -349,7 +349,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper grey"> Coming Soon</span>
@@ -380,7 +380,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper black"> Available</span>
@@ -411,7 +411,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4 ">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper sucess"> Available</span>
@@ -442,7 +442,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper grey"> Coming Soon</span>
@@ -473,7 +473,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper black"> Available</span>
@@ -504,7 +504,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4 ">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper red">Not Available</span>
@@ -535,7 +535,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper grey"> Coming Soon</span>
@@ -566,7 +566,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper black"> Available</span>
@@ -597,7 +597,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4 ">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper sucess"> Available</span>
@@ -628,7 +628,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper grey"> Coming Soon</span>
@@ -659,7 +659,7 @@
                                  </div>
                               </a>
                            </div>
-                           <div class="col-12 col-md-6 col-xl-4">
+                           <div class="col-12 col-md-6 col-xxl-4 ">
                               <a href="car-details.html" class="card-wrapper">
                                  <div class="custom-card-img-wrapper">
                                     <span class="custom-status-wrapper black"> Available</span>
@@ -911,83 +911,83 @@
             </div>
          </div>
       </div>
-      <!-- Footer Section Start -->
-      <footer class="footer-wrapper">
-         <div class="container-xxl">
-            <div class="row g-4">
-               <div class="col-md-12 col-lg-5">
-                  <div class="footer-contact-section">
-                     <img src="./Assets/Images/footer-logo.png" alt="footer logo">
-                     <div class="d-flex py-4">
-                        <a class="orange-filled-btn custom-btn small-btn me-4" href="#">Buy A Car</a>
-                        <a class="white-outline-filled-btn custom-btn small-btn" href="./contactUs.html">Contact Us</a>
+         <!-- Footer Section Start -->
+         <footer class="footer-wrapper">
+            <div class="container-xxl">
+               <div class="row g-4">
+                  <div class="col-12 col-lg-5">
+                     <div class="footer-contact-section">
+                        <img src="./Assets/Images/footer-logo.png" alt="footer logo">
+                        <div class="d-flex py-4 mobile-responsive-center mobile-responsive-column-view ">
+                           <a class="orange-filled-btn custom-btn small-btn me-4" href="#">Buy A Car</a>
+                           <a class="white-outline-filled-btn custom-btn small-btn" href="./contactUs.html">Contact Us</a>
+                        </div>
+                        <div class="footer-contact-inner-section">
+                           <div class="d-flex align-items-center">
+                              <p class="custom-font-bold">WhatsApp</p>
+                              <a href="https://wa.me/112342372323" class="custom-link ps-2">:+(1) 234 237-2323</a>
+                           </div>
+                           <div class="d-flex align-items-center">
+                              <p class="custom-font-bold">Email</p>
+                              <a href="mailto:hello@carwaley.com" class="custom-link ps-2">:hello@carwaley.com</a>
+                           </div>
+                           <div class="d-flex align-items-center">
+                              <p class="custom-font-bold">Address</p>
+                              <p class="ps-2 pe-5">:1502 alter st Philadelphia <br> pa 19146</p>
+                           </div>
+                        </div>
                      </div>
-                     <div class="footer-contact-inner-section">
-                        <div class="d-flex align-items-center">
-                           <p class="custom-font-bold">WhatsApp</p>
-                           <a href="https://wa.me/112342372323" class="custom-link ps-2">:+(1) 234 237-2323</a>
-                        </div>
-                        <div class="d-flex align-items-center">
-                           <p class="custom-font-bold">Email</p>
-                           <a href="mailto:hello@carwaley.com" class="custom-link ps-2">:hello@carwaley.com</a>
-                        </div>
-                        <div class="d-flex align-items-center">
-                           <p class="custom-font-bold">Address</p>
-                           <p class="ps-2 pe-5">:1502 alter st Philadelphia <br> pa 19146</p>
-                        </div>
+                  </div>
+                  <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+                     <div class="footer-menu-links">
+                        <p class="custom-font-bold text-white pb-2">Menus</p>
+                        <ul class="footer-nav-links">
+                           <li><a href="./allCars.html">All Cars</a></li>
+                           <li><a href="./aboutUs.html">About Us</a></li>
+                           <li><a href="./blog.html">Blogs</a></li>
+                           <li><a href="./reviews.html">Reviews</a></li>
+                        </ul>
                      </div>
                   </div>
-               </div>
-               <div class="col-md-4 col-lg-2">
-                  <div class="footer-menu-links">
-                     <p class="custom-font-bold text-white pb-2">Menus</p>
-                     <ul class="footer-nav-links">
-                        <li><a href="./allCars.html">All Cars</a></li>
-                        <li><a href="./aboutUs.html">About Us</a></li>
-                        <li><a href="./blog.html">Blogs</a></li>
-                        <li><a href="./reviews.html">Reviews</a></li>
-                     </ul>
+                  <div class="col-6 col-sm-4 col-md-4 col-lg-2">
+                     <div class="footer-menu-links">
+                        <p class="custom-font-bold text-white pb-2">Get Help</p>
+                        <ul class="footer-nav-links">
+                           <li><a href="./contactUs.html">Contact Us</a></li>
+                           <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#privacy-policy">Privacy Policy</a></li>
+                            <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#terms-condition">Terms and Conditions</a></li>
+                        </ul>
+                     </div>
                   </div>
-               </div>
-               <div class="col-md-4 col-lg-2">
-                  <div class="footer-menu-links">
-                     <p class="custom-font-bold text-white pb-2">Get Help</p>
-                     <ul class="footer-nav-links">
-                        <li><a href="./contactUs.html">Contact Us</a></li>
-                        <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#privacy-policy">Privacy Policy</a></li>
-                         <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#terms-condition">Terms and Conditions</a></li>
-                     </ul>
+                  <div class="col-6 col-sm-4 col-md-4 col-lg-3">
+                     <div class="social-media-links">
+                        <p class="custom-font-bold text-white pb-2">Social Link</p>
+                        <ul>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-instagram"></i></a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-facebook"></i></a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-twitter"></i></a>
+                           </li>
+                           <li>
+                              <a href="javascript:void(0)" class="social-link"><i class="fab fa-linkedin"></i></a>
+                           </li>
+                        </ul>
+                     </div>
                   </div>
-               </div>
-               <div class="col-md-4 col-lg-3">
-                  <div class="social-media-links">
-                     <p class="custom-font-bold text-white pb-2">Social Link</p>
-                     <ul>
-                        <li>
-                           <a href="javascript:void(0)" class="social-link"><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)" class="social-link"><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="patent-section-footer">
-                     <p>All rights reserved </p>
-                     <p>Copyright 2024 By CarWalay</p>
+                  <div class="col-12">
+                     <div class="patent-section-footer">
+                        <p>All rights reserved </p>
+                        <p>Copyright 2024 By CarWalay</p>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-      </footer>
-      <!-- Footer Section End -->
+         </footer>
+         <!-- Footer Section End -->
       </div>
         <!-- Terms Condition Modal -->
   <div class="modal fade custom-modal-popup" id="terms-condition" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="terms-conditionLabel" aria-hidden="true">
