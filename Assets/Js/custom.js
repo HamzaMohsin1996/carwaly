@@ -6,13 +6,49 @@ $(document).ready(function(){
       $('.sidebar-wrapper').toggleClass('show');
       document.body.style.overflow = "hidden"; // Disable scrolling on the body
   });
+  $('#custom-navbar-toggler').on('click', function(){
+    $('.custom-mobile-menu').addClass('show');
+});
+$('#close-sidebar-btn').on('click', function(){
+  $('.custom-mobile-menu').removeClass('show');
+});
+  
   $( "#datepicker" ).datepicker();
 
   $('.close-btn-filter-sidebar').on('click', function(){
     $('.sidebar-wrapper').removeClass('show');
     document.body.style.overflow = "scroll"; // Disable scrolling on the body
 });
-  
+     // Function to handle click event
+    function handleClick(event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+  }
+
+  // Add click event handler initially
+  $('#dropdown-menu-button').click(handleClick);
+
+  // Function to handle media query change
+  function handleMediaQuery(mq) {
+      if (mq.matches) {
+          // If media query matches (e.g., screen width is less than 768px)
+          // Remove the click event handler
+          $('#dropdown-menu-button').off('click', handleClick);
+      } else {
+          // If media query doesn't match
+          // Add the click event handler
+          $('#dropdown-menu-button').click(handleClick);
+      }
+  }
+
+  // Create a media query list for screen width less than 768px
+  var mq = window.matchMedia('(max-width: 991px)');
+
+  // Call handleMediaQuery function initially
+  handleMediaQuery(mq);
+
+  // Add event listener to handle changes in media query
+  mq.addListener(handleMediaQuery);
     
     $('.allCarsBtn').mouseenter(function(){
         $(this).next('.allCarsDropdown').addClass('show');
