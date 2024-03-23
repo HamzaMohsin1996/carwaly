@@ -1661,6 +1661,9 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 @media (max-width: 767px) {
+    .filters-wrapper-inner-wrapper{
+        width: 100%;
+    }
     .about-us-vision-mission{
         padding: 20px;
     }
