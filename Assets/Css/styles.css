@@ -1402,9 +1402,7 @@ input[type=number]::-webkit-outer-spin-button {
     background-position: center right 90px !important;
     padding: 0 20px;
 }
-.custom-header{
-    max-width: 1150px;
-}
+
 .car-wrapper-top {
     position: absolute;
     right: -80px;
@@ -1781,7 +1779,12 @@ input[type=number]::-webkit-outer-spin-button {
 .custom-header {
     max-width: 440px;
 }
-
+.footer-contact-section .ps-2.pe-5{
+    padding-right: 0 !important;
+}
+.footer-contact-inner-section{
+    text-align: left !important;
+}
 }
 
 @media (max-width: 479px) {
@@ -1816,7 +1819,7 @@ input[type=number]::-webkit-outer-spin-button {
         max-width: 220px;
     }
     .custom-header {
-        max-width: 280px;
+        max-width: 320px;
         padding: 10px;
     }
     .navbar-toggler{
