@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans Regular';
+    src: url('./PlusJakartaSans-Regular.ttf') format('truetype');
+    /* Add additional font formats if necessary */
+}
+
 html{
     height: 100%;
 }
 body{
     height: 100%;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'Plus Jakarta Sans Regular';
     font-size: 18px;
 }
 /* Custom Font sizes */
@@ -356,7 +362,7 @@ a.custom-text-primary{
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .custom-link{
-    color: white !important;
+    color:#FFFFFF !important;
     font-size: 18px;
     font-weight: 400 !important;
 }
@@ -445,22 +451,22 @@ a.custom-text-primary{
 .custom-secondary-button:hover{
     background: #FF5450 !important;
     border: 1px solid transparent;
-    color: white !important;
+    color:#FFFFFF !important;
 }
 .orange-filled-btn{
     background-color: #FF5450 !important;
-    color: white !important;
+    color:#FFFFFF !important;
     border: 1px solid transparent;
 }
 .orange-filled-btn:hover{
-    background-color: white !important;
+    background-color:#FFFFFF !important;
     color: #FF5450 !important;
     border: 1px solid #FF5450;
 }
 .white-outline-btn{
     background-color: transparent;
     border: 1px solid white;
-    color: white !important;
+    color:#FFFFFF !important;
 }
 .white-outline-btn:hover{
     background-color: #FF5450 !important;
@@ -487,7 +493,7 @@ a.custom-text-primary{
 }
 .white-outline-filled-btn:hover{
     background: #FF5450 !important;
-    color: white !important;
+    color:#FFFFFF !important;
 }
 .nav-link{
     padding: 0 24px !important;
@@ -664,12 +670,13 @@ a.custom-text-primary{
     background-position: center !important;
     background-repeat: no-repeat !important;
     height: 900px;
-}
-.banner-section{
     display:flex;
     align-items: center;
     justify-items: flex-start;
-    color: white;
+    color: #FFFFFF !important;
+}
+.banner-section p{
+    color: #FFFFFF !important;
 }
 .banner-inner-section-wrapper{
     max-width: 740px;
@@ -718,10 +725,10 @@ a.custom-text-primary{
     background-repeat: no-repeat , no-repeat !important;
     background-position: center right , top left!important;
     background-size: contain, 20% !important;
-    color: white !important;
+    color: #FFFFFF !important;
 }
 .car-deals p{
-    color: white !important;
+    color: #FFFFFF !important;
 }
 .car-wrapper-top{
     position: absolute;
@@ -745,7 +752,7 @@ a.custom-text-primary{
     background-position: center !important;
     background-repeat: no-repeat !important;
     padding: 32px;
-    color: white !important;
+    color:#FFFFFF !important;
     display: flex;
     align-items: flex-end;
     opacity: 0.8;
@@ -865,7 +872,7 @@ a.custom-text-primary{
     padding: 5px 0;
   }
   .footer-nav-links a{
-    color: white !important;
+    color:#FFFFFF !important;
     font-size: 16px !important;
     font-weight: 400 !important;
   }
@@ -885,7 +892,7 @@ a.custom-text-primary{
     padding-left: 0 !important;
   }
   .social-media-links a i{
-    color: white !important;
+    color:#FFFFFF !important;
     font-size: 20px !important;
   }
   .social-media-links a:hover i{
@@ -896,7 +903,7 @@ a.custom-text-primary{
   }
   .patent-section-footer p{
    
-    color: white !important;
+    color:#FFFFFF !important;
     text-align: center;
   }
   .filter-by-car-types{
@@ -1004,7 +1011,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .custom-slider .owl-nav button{
     background: #FF5450 !important;
-    color: white !important;
+    color:#FFFFFF !important;
 }
 .custom-slider .owl-nav button span{
     display: none;
@@ -1118,7 +1125,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: calc(100% - 32px);
 }
 .custom-pagination-wrapper .page-item.active .page-link{
-    color: white !important;
+    color:#FFFFFF !important;
     background-color: #0F2882 !important;
 }
 .sidebar-wrapper{
@@ -1267,7 +1274,7 @@ input[type=number]::-webkit-outer-spin-button {
     height: auto !important;
     background-size: cover !important;
     position: relative;
-    color: white !important;
+    color:#FFFFFF !important;
 }
 .contact-us-banner::before{
     content: '';
@@ -1780,11 +1787,11 @@ input[type=number]::-webkit-outer-spin-button {
     max-width: 440px;
 }
 .footer-contact-section .ps-2.pe-5{
-    padding-right: 0 !important;
-}
-.footer-contact-inner-section{
-    text-align: left !important;
-}
+        padding-right: 0 !important;
+    }
+    .footer-contact-inner-section{
+        text-align: left !important;
+    }
 }
 
 @media (max-width: 479px) {
