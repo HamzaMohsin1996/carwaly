@@ -3,6 +3,26 @@
     src: url('./PlusJakartaSans-Regular.ttf') format('truetype');
     /* Add additional font formats if necessary */
 }
+@font-face {
+    font-family: 'Plus Jakarta Sans bold';
+    src: url('./PlusJakartaSans-Bold.ttf') format('truetype');
+    /* Add additional font formats if necessary */
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans extrabold';
+    src: url('./PlusJakartaSans-ExtraBold.ttf') format('truetype');
+    /* Add additional font formats if necessary */
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans semibold';
+    src: url('./PlusJakartaSans-SemiBold.ttf') format('truetype');
+    /* Add additional font formats if necessary */
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans medium';
+    src: url('./PlusJakartaSans-Medium.ttf') format('truetype');
+    /* Add additional font formats if necessary */
+}
 
 html{
     height: 100%;
@@ -18,11 +38,11 @@ h1,h2,h3,h4,h5,h6,p{
 }
 h1{
     font-size: 60px;
-    font-weight: 800;
+    font-family: 'Plus Jakarta Sans extrabold';
 }
 h2{
     font-size: 48px;
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans semibold';
     margin: 0;
 }
 h3{
@@ -74,7 +94,7 @@ a.custom-text-black{
 }
 a{
     font-size: 20px !important;
-    font-weight: 500 !important;
+    font-family: 'Plus Jakarta Sans medium';
     color: #0F2882 !important;
     text-decoration: none !important;
     
@@ -121,19 +141,19 @@ a.custom-text-primary{
     border: 1px solid #C0C4D7;
 }
 .custom-font-bold{
-    font-weight: 800;
+    font-family: 'Plus Jakarta Sans extrabold';
 }
 .custom-font-bold-extra{
-    font-weight: 700;
+    font-family: 'Plus Jakarta Sans bold';
 }
 .custom-font-semibold{
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans semibold';
 }
 .font-weight-500{
-    font-weight: 500;
+    font-family: 'Plus Jakarta Sans medium';
 }
 .font-regular{
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
 }
 
 .custom-input-wrapper, .custom-select, .custom-textarea{ 
@@ -149,7 +169,7 @@ a.custom-text-primary{
     border-radius: 4px;
     background: #E6E8EE;
     font-size: 16px;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
     color: #575E8D;
     border: none;
     box-shadow: none;
@@ -162,7 +182,7 @@ a.custom-text-primary{
     border-radius: 4px;
     background: #E6E8EE;
     font-size: 16px;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
     color: #575E8D;
     border: none;
     box-shadow: none;
@@ -184,7 +204,7 @@ a.custom-text-primary{
     border-radius: 4px;
     background: #E6E8EE;
     font-size: 16px;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
     color: #575E8D;
     border: none;
     box-shadow: none;
@@ -212,7 +232,7 @@ a.custom-text-primary{
     border-radius: 4px;
     background: #E6E8EE;
     font-size: 16px;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
     color: #575E8D;
     border: none;
     box-shadow: none;
@@ -327,7 +347,7 @@ a.custom-text-primary{
 .custom-btn{
     padding: 14px 32px;
     font-size: 20px;
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans semibold';
     border-radius: 10px;
     text-align: center;
     text-decoration: none !important;
@@ -338,7 +358,7 @@ a.custom-text-primary{
 .width-auto{
     min-width: auto; 
     font-size: 16px;
-    font-weight: 500;
+    font-family: 'Plus Jakarta Sans medium';
 }
 .small-btn{
     padding: 10px !important;
@@ -364,7 +384,7 @@ a.custom-text-primary{
 .custom-link{
     color:#FFFFFF !important;
     font-size: 18px;
-    font-weight: 400 !important;
+    font-family: 'Plus Jakarta Sans Regular' !important;
 }
 .custom-transparent-btn{
     font-size: 16px;
@@ -403,7 +423,6 @@ a.custom-text-primary{
     transition: transform 0.3s ease;
 }
 .custom-primary-button  span i{
-    font-weight: 700; 
     transform-origin: center; 
 }
 .custom-primary-button:hover span i{
@@ -436,11 +455,11 @@ a.custom-text-primary{
 .filter-by-city li a{
     font-size: 12px !important;
     color: #545454 !important;
-    font-weight: 500;
+    font-family: 'Plus Jakarta Sans medium';
 }
 .nav-item .custom-primary-button{
     font-size: 16px !important;
-    font-weight: 500 !important;
+    font-family: 'Plus Jakarta Sans medium';
 } 
 .custom-secondary-button{
     color: #FF5450 !important;
@@ -478,7 +497,7 @@ a.custom-text-primary{
     transition: transform 0.3s ease;
 }
 .orange-filled-btn  span i{
-    font-weight: 700; 
+ 
     transform-origin: center; 
 }
 .orange-filled-btn:hover span i{
@@ -522,7 +541,7 @@ a.custom-text-primary{
     border: none;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
     min-height: 80px;
     outline: none;
     color: #575E8D;
@@ -681,6 +700,9 @@ a.custom-text-primary{
 .banner-inner-section-wrapper{
     max-width: 740px;
 }
+.banner-inner-section-wrapper h2{
+    font-family: 'Plus Jakarta Sans extrabold' ;
+}
  /* Brands Section Css */
 .brands-section {
     padding: 30px 0;
@@ -810,7 +832,7 @@ a.custom-text-primary{
   }
   .custom-accordian  button{
     font-size: 22px;
-    font-weight: 600;
+    font-family: 'Plus Jakarta Sans semibold';
     color:#1C1C45 ;
     border: none !important;
     box-shadow: none !important;
@@ -874,7 +896,7 @@ a.custom-text-primary{
   .footer-nav-links a{
     color:#FFFFFF !important;
     font-size: 16px !important;
-    font-weight: 400 !important;
+    font-family: 'Plus Jakarta Sans Regular' !important;
   }
    .social-media-links ul{
     text-decoration: none;
@@ -1095,12 +1117,12 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: right;
     color:  #575E8D;
     font-size: 14px;
-    font-weight: 400;
+    font-family: 'Plus Jakarta Sans Regular';
 }
 .custom-slider-wrapper .custom-slider-inner p{
     color:  #1C1C45;
     font-size: 14px;
-    font-weight: 500;
+    font-family: 'Plus Jakarta Sans medium';
 }
 
 .custom-slider-wrapper  .ui-widget.ui-widget-content {
@@ -1208,7 +1230,7 @@ input[type=number]::-webkit-outer-spin-button {
 .custom-breadcrumbs-wrapper a{
     color: #807D7E !important;
     font-size: 16px !important;
-    font-weight: 500 !important;
+    font-family: 'Plus Jakarta Sans medium';
 }
 
 .custom-breadcrumbs-wrapper ol li:before {
@@ -1251,7 +1273,7 @@ input[type=number]::-webkit-outer-spin-button {
       }
       
       .custom-font-semibold {
-        font-weight: 600;
+        font-family: 'Plus Jakarta Sans semibold';
       }
       
 .our-experts{
@@ -1373,8 +1395,20 @@ input[type=number]::-webkit-outer-spin-button {
   .custom-modal-popup p{
     color: #575E8D !important;
   }
-  
-@media (max-width: 1441px) {
+
+
+
+  .error-wrapper {
+    padding-bottom: 60px;
+  }
+  .error-wrapper .error-img{
+    max-width: 500px;
+  }
+
+
+
+
+  @media (max-width: 1441px) {
     .banner-section.all-cars-section{
         height: auto !important;
         margin-top:80px ;
@@ -1704,11 +1738,11 @@ input[type=number]::-webkit-outer-spin-button {
     }
     h1{
         font-size: 46px;
-        font-weight: 800;
+        font-family: 'Plus Jakarta Sans extrabold';
     }
     h2{
         font-size: 32px;
-        font-weight: 600;
+        font-family: 'Plus Jakarta Sans semibold';
         margin: 0;
     }
     h3{
