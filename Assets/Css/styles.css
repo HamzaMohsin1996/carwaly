@@ -1958,7 +1958,7 @@ input[type=number]::-webkit-outer-spin-button {
   .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 15px;
+    height: 5px;
     border-radius: 5px;
     background: linear-gradient(to right, blue, yellow, red);
     outline: none;
@@ -1968,12 +1968,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* Style the thumb */
+.stove-wrapper{
+    position: relative;
+}
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 5px;
+    height:15px;
+    border-radius:5px;
     background: white;
     cursor: pointer;
     border: 2px solid #777;
@@ -1986,4 +1989,22 @@ input[type=number]::-webkit-outer-spin-button {
     background: white;
     cursor: pointer;
     border: 2px solid #777;
+}
+.stove-wrapper{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.stove-wrapper img{
+    max-width: 100%;
+}
+.custom-slider{
+    max-width: 100px;
+    position: absolute;
+    bottom: 37%;
+    left: 38%;
+    background: #1e2022;
+    max-height: 28px;
+}
+#heatLevel{
+    font-size: 0;
 }
