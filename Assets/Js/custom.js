@@ -137,7 +137,8 @@ function vibratePhone() {
   // Check if the Vibration API is supported
   if ("vibrate" in navigator) {
       // Vibrate for 1000 milliseconds (1 second)
-      navigator.vibrate(1000);
+      navigator.vibrate([100, 200, 300, 400]);
+
       
   } else {
       // Fallback for browsers that don't support the Vibration API
