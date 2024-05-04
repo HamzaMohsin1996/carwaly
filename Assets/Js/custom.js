@@ -135,26 +135,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let clickCount = 0;
 
-function vibratePhone() {
-    // Check if the Vibration API is supported
-    if ("vibrate" in navigator) {
-        clickCount++;
+function vibrateShort() {
+  vibrate([200]);  // Vibrate for 0.2 seconds (200 milliseconds)
+}
 
-        if (clickCount === 1) {
-            // Vibrate for 2 seconds
-            navigator.vibrate(2000);
-        } else if (clickCount === 2) {
-            // Vibrate for 5 seconds
-            navigator.vibrate(5000);
-        } else if (clickCount === 3) {
-            // Vibrate for 15 seconds
-            navigator.vibrate(15000);
-        } else {
-            // Reset click count after the third click
-            clickCount = 0;
-        }
-    } else {
-        // Fallback for browsers that don't support the Vibration API
-        alert("Vibration is not supported on this device.");
-    }
+function vibrateMedium() {
+  vibrate([500]);  // Vibrate for 0.5 seconds (500 milliseconds)
+}
+
+function vibrateLong() {
+  vibrate([1500]); // Vibrate for 1.5 seconds (1500 milliseconds)
+}
+
+function vibrate(pattern) {
+  // Check if the Vibration API is supported
+  if ("vibrate" in navigator) {
+      // Vibrate with the specified pattern
+      navigator.vibrate(pattern);
+  } else {
+      // Fallback for browsers that don't support the Vibration API
+      alert("Vibration is not supported on this device.");
+  }
 }
