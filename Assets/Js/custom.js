@@ -133,3 +133,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+function vibratePhone() {
+  // Check if the Vibration API is supported
+  if ("vibrate" in navigator) {
+      // Vibrate for 1000 milliseconds (1 second)
+      navigator.vibrate(1000);
+      
+  } else {
+      // Fallback for browsers that don't support the Vibration API
+      alert("Vibration is not supported on this device.");
+  }
+}

@@ -244,6 +244,7 @@ a.custom-text-primary{
     padding: 16px;
     border-radius: 15px;
     border: 1.251px solid #C0C4D7;
+    background-color: white !important;
     display: block;
     text-decoration: none;
 }
