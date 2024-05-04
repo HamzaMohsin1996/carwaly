@@ -133,15 +133,28 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function vibratePhone() {
-  // Check if the Vibration API is supported
-  if ("vibrate" in navigator) {
-      // Vibrate for 1000 milliseconds (1 second)
-      navigator.vibrate([100, 200, 300, 400]);
+let clickCount = 0;
 
-      
-  } else {
-      // Fallback for browsers that don't support the Vibration API
-      alert("Vibration is not supported on this device.");
-  }
+function vibratePhone() {
+    // Check if the Vibration API is supported
+    if ("vibrate" in navigator) {
+        clickCount++;
+
+        if (clickCount === 1) {
+            // Vibrate for 2 seconds
+            navigator.vibrate(2000);
+        } else if (clickCount === 2) {
+            // Vibrate for 5 seconds
+            navigator.vibrate(5000);
+        } else if (clickCount === 3) {
+            // Vibrate for 15 seconds
+            navigator.vibrate(15000);
+        } else {
+            // Reset click count after the third click
+            clickCount = 0;
+        }
+    } else {
+        // Fallback for browsers that don't support the Vibration API
+        alert("Vibration is not supported on this device.");
+    }
 }
