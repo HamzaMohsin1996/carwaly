@@ -92,14 +92,17 @@ heatSlider.addEventListener("input", function() {
     }
 
     // Calculate the width of the progress bar based on the slider value
-    const progressWidth = (value / 100) * heatSlider.offsetWidth;
+    const progressWidth = ((value / 100) * heatSlider.offsetWidth) - 5;
+
     progressBar.style.width = `${progressWidth}px`;
 
     // Set background color based on heat level
     if (value <= 33) {
-        progressBar.style.backgroundColor = "#338BF3";
+        progressBar.style.background = "#338BF3";
+
     } else if (value <= 66) {
-        progressBar.style.backgroundColor = "#FFD231";
+        progressBar.style.background = "#FFD231";
+
     } else {
         progressBar.style.background = "linear-gradient(90deg, rgba(255,210,49,1) 0%, rgba(229,55,55,1) 100%)";
     }
