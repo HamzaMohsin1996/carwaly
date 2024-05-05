@@ -21,46 +21,71 @@
         <img src="./Assets/Images/stove.png" alt="stove-image">
         <div class="custom-slider">
             <input type="range" min="1" max="100" value="1" class="slider" id="heatSlider">
+            <div class="progress-bar"></div>
+
         <span id="heatLevel">Low</span>
         </div>
         
     </div>
 
 <script>
-    const heatSlider = document.getElementById("heatSlider");
- const heatLevel = document.getElementById("heatLevel");
- 
- heatSlider.addEventListener("input", function() {
-     // Update heat level text
-     const value = heatSlider.value;
-     if (value <= 33) {
-         heatLevel.textContent = "Low";
-     } else if (value <= 66) {
-         heatLevel.textContent = "Medium";
-     } else {
-         heatLevel.textContent = "High";
-     }
- 
-     // Add haptic feedback based on heat level
-     if ("vibrate" in navigator) {
-         if (value <= 33) {
-             navigator.vibrate([100]); // Short vibration for low heat
-         } else if (value <= 66) {
-             navigator.vibrate([200]); // Medium vibration for medium heat
-         } else {
-             navigator.vibrate([300]); // Long vibration for high heat
-         }
-     }
- 
-     // Add sound feedback based on heat level
-     if (value <= 33) {
-         new Audio("./Assets/Images/audio1.m4a").play(); // Play low heat sound
-     } else if (value <= 66) {
-         new Audio("./Assets/Images/audio2.m4a").play(); // Play medium heat sound
-     } else {
-         new Audio("./Assets/Images/audio3.m4a").play(); // Play high heat sound
-     }
- });
+const heatSlider = document.getElementById("heatSlider");
+const heatLevel = document.getElementById("heatLevel");
+const progressBar = document.querySelector(".progress-bar");
+const audio = new Audio(); // Create a single Audio object
+
+function playSound(soundPath) {
+    audio.pause(); // Pause the current audio (if any)
+    audio.src = soundPath; // Set the source of the audio
+    audio.play(); // Play the new audio
+}
+
+heatSlider.addEventListener("input", function() {
+    const value = heatSlider.value;
+
+    // Update heat level text
+    if (value <= 33) {
+        heatLevel.textContent = "Low";
+    } else if (value <= 66) {
+        heatLevel.textContent = "Medium";
+    } else {
+        heatLevel.textContent = "High";
+    }
+
+    // Add haptic feedback based on heat level
+    if ("vibrate" in navigator) {
+        if (value <= 33) {
+            navigator.vibrate([300]); // Short vibration for low heat
+        } else if (value <= 66) {
+            navigator.vibrate([600]); // Medium vibration for medium heat
+        } else {
+            navigator.vibrate([1200]); // Long vibration for high heat
+        }
+    }
+
+    // Add sound feedback based on heat level
+    if (value <= 33) {
+        playSound("./Assets/Images/audio1.mp3"); // Play low heat sound
+    } else if (value <= 66) {
+        playSound("./Assets/Images/audio2.wav"); // Play medium heat sound
+    } else {
+        playSound("./Assets/Images/audio3.wav"); // Play high heat sound
+    }
+
+    // Calculate the width of the progress bar based on the slider value
+    const progressWidth = (value / 100) * heatSlider.offsetWidth;
+    progressBar.style.width = `${progressWidth}px`;
+
+    // Set background color based on heat level
+    if (value <= 33) {
+        progressBar.style.backgroundColor = "#338BF3";
+    } else if (value <= 66) {
+        progressBar.style.backgroundColor = "#FFD231";
+    } else {
+        progressBar.style.background = "linear-gradient(90deg, rgba(255,210,49,1) 0%, rgba(229,55,55,1) 100%)";
+    }
+});
+
   </script>
        <!-- Bootstrap JS -->
        <script src="./Assets/Js/jquery-3.5.1.min.js"></script>
