@@ -1958,7 +1958,7 @@ input[type=number]::-webkit-outer-spin-button {
   .slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 5px;
+    height: 8px;
     border-radius: 5px;
     background-color: grey; /* Default background color */
     outline: none;
@@ -1970,12 +1970,17 @@ input[type=number]::-webkit-outer-spin-button {
 /* Style the thumb */
 .stove-wrapper{
     position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black ;
 }
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 5px;
-    height:15px;
+    width: 10px;
+    height:25px;
     border-radius:5px;
     background: white;
     cursor: pointer;
@@ -1988,8 +1993,8 @@ input[type=number]::-webkit-outer-spin-button {
 .slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 5px;
-    height:15px;
+    width: 10px;
+    height:25px;
     border-radius:5px;
     background: white;
     cursor: pointer;
@@ -1999,19 +2004,18 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
 }
 .stove-wrapper{
-    max-width: 400px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .stove-wrapper img{
     max-width: 100%;
 }
 .custom-slider{
-    max-width: 100px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 37%;
-    left: 38%;
-    background: #1e2022;
+    max-width: 500px;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    background: transparent;
     max-height: 28px;
 }
 #heatLevel{
@@ -2019,8 +2023,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .progress-bar {
     position: absolute;
-    top: 56%;
-    height: 5px;
+    top: 48%;
+    height: 8px;
     background: gray;
     border-radius: 5px;
 }
