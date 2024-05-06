@@ -78,7 +78,7 @@ heatSlider.addEventListener("input", function() {
         } else if (value <= 66) {
             navigator.vibrate([600]); // Medium vibration for medium heat
         } else {
-            navigator.vibrate([1200]); // Long vibration for high heat
+            navigator.vibrate([500, 300, 700, 500]);
         }
     }
 
