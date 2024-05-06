@@ -70,7 +70,19 @@ heatSlider.addEventListener("input", function() {
     } else {
         heatLevel.textContent = "High";
     }
-    Haptics.heartbeat(500);
+
+    // Add haptic feedback based on heat level
+    if ("vibrate" in Haptics) {
+        if (value <= 33) {
+            Haptics.heartbeat(500);
+        } else if (value <= 66) {
+            Haptics.fadeIn(1000);
+
+        } else {
+            Haptics.fadeIn([500, 100, 500]);
+
+        }
+    }
 
     // Add sound feedback based on heat level
     if (value <= 33) {
