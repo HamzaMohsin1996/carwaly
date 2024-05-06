@@ -1,123 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Home</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="./Assets/Css/bootstrap.min.css" >
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />      <!-- Font Awesome -->
-      <link rel="stylesheet" href="./Assets/Css/all.min.css">
-      <link rel="stylesheet" href="./Assets/Css/owl.carousel.min.css">
-      <link rel="stylesheet" href="./Assets/Css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="./Assets/Css/jquery-ui.css">
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="./Assets/Css/styles.css">
-   </head>
-   <body>
-    <div class="stove-wrapper">
-        <svg width="28" height="28" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.2817 3.57995C12.4697 3.05097 13.055 2.76879 13.5552 3.02368C14.8538 3.68547 15.9485 4.70022 16.7074 5.96031C17.642 7.5121 18.0097 9.33995 17.7477 11.1324C17.4857 12.9249 16.6103 14.5711 15.2707 15.7905C13.931 17.0099 12.21 17.727 10.4009 17.8198C8.59176 17.9125 6.80644 17.3751 5.34912 16.2991C3.8918 15.2231 2.85265 13.6751 2.40874 11.9188C1.96483 10.1625 2.14361 8.30666 2.91464 6.66743C3.54072 5.33633 4.52586 4.21495 5.75004 3.42383C6.22153 3.11912 6.8326 3.33997 7.0737 3.84695C7.31481 4.35392 7.09229 4.95365 6.63515 5.2795C5.82987 5.85353 5.17996 6.62764 4.75425 7.5327C4.18342 8.74633 4.05105 10.1203 4.37971 11.4206C4.70836 12.7209 5.47771 13.867 6.55665 14.6637C7.6356 15.4603 8.95739 15.8582 10.2968 15.7895C11.6362 15.7208 12.9104 15.1899 13.9022 14.2871C14.894 13.3843 15.5421 12.1655 15.7361 10.8384C15.9301 9.51134 15.6579 8.15806 14.9659 7.00917C14.4499 6.15239 13.7242 5.44881 12.8645 4.96014C12.3764 4.68275 12.0937 4.10892 12.2817 3.57995Z" fill="#32C441"/>
-            <path d="M10 3V10" stroke="#32C441" stroke-width="2" stroke-linecap="round"/>
-            </svg>            
-        <svg width="28" height="28" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="9" cy="9" r="8.5" transform="matrix(-1 0 0 1 18 0)" fill="#868686" stroke="#3C3838"/>
-            <circle cx="3" cy="3" r="2.5" transform="matrix(-1 0 0 1 18 0)" stroke="white"/>
-            </svg>
-            <svg width="28" height="28" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9" cy="9" r="8.5" transform="matrix(-1 0 0 1 18 0)" fill="#868686" stroke="#3C3838"/>
-                <circle cx="3" cy="3" r="2.5" transform="matrix(-1 0 0 1 18 0)" stroke="white"/>
-                </svg> 
-        <div class="custom-slider">
-            <input type="range" min="1" max="100" value="1" class="slider" id="heatSlider">
-            <div class="progress-bar"></div>
+<html>
+<head>
+  <title>Haptic Button Test</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/haptics.js/0.5.0/haptics.min.js"></script>
+</head>
+<body>
+  <h1>Haptic Button Test</h1>
+  <button id="simpleVib">Simple Vibration</button>
+  <button id="vibPattern">Vibration Pattern</button>
+  <button id="heartbeatSingle">Heartbeat (Single)</button>
+  <button id="heartbeatMultiple">Heartbeat (Multiple)</button>
+  <button id="fadeInSingle">Fade In (Single)</button>
+  <button id="fadeInPattern">Fade In (Pattern)</button>
+  <button id="fadeOutSingle">Fade Out (Single)</button>
+  <button id="fadeOutPattern">Fade Out (Pattern)</button>
 
-        <span id="heatLevel">Low</span>
-        </div>
-        <svg width="28" height="28" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="9" cy="9" r="8.5" transform="matrix(-1 0 0 1 18 0)" fill="#868686" stroke="#3C3838"/>
-            <circle cx="3" cy="3" r="2.5" transform="matrix(-1 0 0 1 18 0)" stroke="white"/>
-            </svg>
-            <svg width="28" height="28" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9" cy="9" r="8.5" transform="matrix(-1 0 0 1 18 0)" fill="#868686" stroke="#3C3838"/>
-                <circle cx="3" cy="3" r="2.5" transform="matrix(-1 0 0 1 18 0)" stroke="white"/>
-                </svg>
-        
-    </div>
+  <script>
+  const buttons = document.querySelectorAll("button");
 
-<script>
-const heatSlider = document.getElementById("heatSlider");
-const heatLevel = document.getElementById("heatLevel");
-const progressBar = document.querySelector(".progress-bar");
-const audio = new Audio(); // Create a single Audio object
-
-function playSound(soundPath) {
-    audio.pause(); // Pause the current audio (if any)
-    audio.src = soundPath; // Set the source of the audio
-    audio.play(); // Play the new audio
-}
-
-heatSlider.addEventListener("input", function() {
-    const value = heatSlider.value;
-
-    // Update heat level text
-    if (value <= 33) {
-        heatLevel.textContent = "Low";
-    } else if (value <= 66) {
-        heatLevel.textContent = "Medium";
-    } else {
-        heatLevel.textContent = "High";
-    }
-
-    // Add haptic feedback based on heat level
-    if ("vibrate" in Haptics) {
-        if (value <= 33) {
-            Haptics.heartbeat(500);
-        } else if (value <= 66) {
-            Haptics.fadeIn(1000);
-
-        } else {
-            Haptics.fadeIn([500, 100, 500]);
-
-        }
-    }
-
-    // Add sound feedback based on heat level
-    if (value <= 33) {
-        playSound("./Assets/Images/audio1.mp3"); // Play low heat sound
-    } else if (value <= 66) {
-        playSound("./Assets/Images/audio2.wav"); // Play medium heat sound
-    } else {
-        playSound("./Assets/Images/audio3.wav"); // Play high heat sound
-    }
-
-    // Calculate the width of the progress bar based on the slider value
-    const progressWidth = ((value / 100) * heatSlider.offsetWidth) - 5;
-
-    progressBar.style.width = `${progressWidth}px`;
-
-    // Set background color based on heat level
-    if (value <= 33) {
-        progressBar.style.background = "#338BF3";
-
-    } else if (value <= 66) {
-        progressBar.style.background = "#FFD231";
-
-    } else {
-        progressBar.style.background = "linear-gradient(90deg, rgba(255,210,49,1) 0%, rgba(229,55,55,1) 100%)";
-    }
-});
-
+  buttons.forEach(button => {
+    button.addEventListener("click", function() {
+      const effect = this.id;  // Get the button ID to identify the effect
+      
+      switch (effect) {
+        case "simpleVib":
+          console.log("Simple Vibration (200ms)");
+          Haptics.vibrate(200);
+          break;
+        case "vibPattern":
+          console.log("Vibration Pattern: [400ms, 200ms pause, 1000ms, 200ms pause, 400ms]");
+          Haptics.vibrate([400, 200, 1000, 200, 400]);
+          break;
+        case "heartbeatSingle":
+          console.log("Heartbeat (Single Pulse - 500ms)");
+          Haptics.heartbeat(500);
+          break;
+        case "heartbeatMultiple":
+          console.log("Heartbeat Pattern: [500ms, 500ms pause, 500ms]");
+          Haptics.heartbeat([500, 500, 500]);
+          break;
+        case "fadeInSingle":
+          console.log("Fade In (Single Duration - 1000ms)");
+          Haptics.fadeIn(1000);
+          break;
+        case "fadeInPattern":
+          console.log("Fade In Pattern: [500ms, 100ms, 500ms]");
+          Haptics.fadeIn([500, 100, 500]);
+          break;
+        case "fadeOutSingle":
+          console.log("Fade Out (Single Duration - 1000ms)");
+          Haptics.fadeOut(1000);
+          break;
+        case "fadeOutPattern":
+          console.log("Fade Out Pattern: [500ms, 100ms, 500ms]");
+          Haptics.fadeOut([500, 100, 500]);
+          break;
+      }
+    });
+  });
   </script>
-       <!-- Bootstrap JS -->
-       <script src="./Assets/Js/jquery-3.5.1.min.js"></script>
-       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-       <script src="./Assets/Js/popper.min.js"></script>
-       <script src="./Assets/Js/bootstrap.bundle.min.js" ></script>
-       <script src="./Assets/Js/owl.carousel.min.js"></script>
-       <script src="./Assets/Js/haptics.js"></script>
-       <script src="./Assets/Js/custom.js"></script>
-    </body>
- </html>
+</body>
+</html>
