@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="./Assets/Css/owl.carousel.min.css">
         <link rel="stylesheet" href="./Assets/Css/owl.theme.default.min.css">
         <link rel="stylesheet" href="./Assets/Css/jquery-ui.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./Assets/Css/styles.css">
@@ -29,7 +30,8 @@
         <div class="main-content-inner">
             <div class="container">
                 <div class="main-content"> 
-            <div class="row w-100">
+            <div class="row w-100 custom-box-relative">
+           
                 <div class="col-12">
                     <img src="./Assets/Images/male.gif" class="images active left-images" id="left-0">
                     <img src="./Assets/Images/hi-male.gif" class="images left-images" id="left-1">
@@ -40,7 +42,14 @@
                         <div class="d-none"><canvas id="canvas" ></canvas></div>
                         <div id="label-container" class="d-flex mt-4 justify-content-lg-around d-none"></div>
                     </div>
-                 
+                    <div class="custom-box-relative">
+                        <div class="icons-wrapper">
+                            <div id="hearticon" class="bigheart d-none"><i class="far fa-heart"></i></div>
+                            <div id="thumbsup" class="thumbsup d-none"><i class="fa fa-regular fa-thumbs-up"></i></div>
+                            <div id="handup" class="handraised d-none"><i class="fa fa-regular fa-hand"></i></div>
+                        </div>  
+                    </div>
+                     
                 </div>
               
             </div>
@@ -49,11 +58,13 @@
         </div>
         <div class="footer-wrapper-new">
             <div class="button-container">
+                      <!--  
                 <button id="mute-unmute">
                     <i class="fa fa-solid fa-microphone"></i>
                     <i class="fa fa-solid fa-microphone-slash"></i>
     
                 </button>
+                -->
                 <button id="end-call"><i class="fas fa-phone"></i></button>
                 <button id="chat" class="center-button"><i class="fas fa-comment"></i></button>
               </div>
@@ -88,17 +99,13 @@
   <script src="./Assets/Js/custom.js"></script>
       
            <script type="text/javascript">
-             const muteUnmuteButton = document.getElementById('mute-unmute');
+             
 const sidebar = document.getElementById('sidebar');
 const chattogglebtn = document.getElementById('chat');
 const leftWrapper = document.getElementById('leftwrapper');
 const closeBtn = document.getElementById('close-btn');
 
 
-muteUnmuteButton.addEventListener('click', function() {
-this.classList.toggle('active');
-// Add logic for muting/unmuting
-});
 
 chattogglebtn.addEventListener('click', function(){
    sidebar.classList.toggle('active');
@@ -161,9 +168,14 @@ closeBtn.addEventListener('click', function(){
                            "Thumbs Up": "left-2",
                            "Heart Shape": "left-3",
                            "No Gesture": "left-0",
-                           "Clapping": "left-4",
                        };
-       
+                       const classToBodyClassMap = {
+        "Hands Up": "hand-raised",
+        "Thumbs Up": "thumbs-up",
+        "Heart Shape": "heart-shape",
+        "No Gesture": "no-gesture",
+    };
+   
                        console.log(prediction); // Log predictions for debugging
        
                        for (let i = 0; i < maxPredictions; i++) {
@@ -172,19 +184,25 @@ closeBtn.addEventListener('click', function(){
                            labelContainer.childNodes[i].innerHTML = classPrediction;
        
                            // Check if the current class has the highest probability
-                           if (prediction[i].probability > 0.5 && prediction[i].probability > maxClassProbability) {
+                           if (prediction[i].probability > 0.75 && prediction[i].probability > maxClassProbability) {
                                maxClassProbability = prediction[i].probability;
                                maxClassIndex = i;
                            }
                        }
-       
+               
+
                        // Update the active image based on the highest probability class
                        if (maxClassIndex !== -1) {
                            const activeClassName = prediction[maxClassIndex].className;
                            const activeImageId = classToImageMap[activeClassName];
+                           const activeBodyClass = classToBodyClassMap[activeClassName];
+                   
+
+                           
        
                            if (activeImageId) {
-                               for (let i = 0; i < 5; i++) { // We have 4 images, update the loop range
+                            document.body.className = activeBodyClass;
+                               for (let i = 0; i < 4; i++) { // We have 4 images, update the loop range
                                    const imageElement = document.getElementById(`left-${i}`);
                                    if (`left-${i}` === activeImageId) {
                                        imageElement.classList.add('active');
@@ -194,7 +212,8 @@ closeBtn.addEventListener('click', function(){
                                }
                            }
                        } else {
-                           // If no class probability is greater than 0.5, ensure default image is active
+                        document.body.className = "no-gesture";
+                           // If no class probability is greater than 0.75, ensure default image is active
                            for (let i = 0; i < 5; i++) { // We have 4 images, update the loop range
                                const imageElement = document.getElementById(`left-${i}`);
                                if (i === 0) {
@@ -204,10 +223,15 @@ closeBtn.addEventListener('click', function(){
                                }
                            }
                        }
+
+                   
+
+
        
                        // Draw the pose on the canvas
                        drawPose(pose);
                    }
+                   
        
            
        
@@ -216,7 +240,7 @@ closeBtn.addEventListener('click', function(){
                            ctx.drawImage(webcam.canvas, 0, 0);
                            // draw the keypoints and skeleton
                            if (pose) {
-                               const minPartConfidence = 0.5
+                               const minPartConfidence = 0.75
                                ; tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
                                tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
                            }

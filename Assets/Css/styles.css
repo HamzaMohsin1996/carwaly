@@ -2172,3 +2172,53 @@ h2{
   #label-container div:nth-last-child(1){
     display: none;
   }
+
+  .box {
+    height: 90%;
+    max-height: 400px;
+  }
+  
+  #heart {
+    height: 100%;
+    margin-left: auto;
+    animation: 1.5s ease 0s infinite beat;
+  }
+  
+  @keyframes beat {
+    0%, 50%, 100% { transform: scale(1, 1); }
+    30%, 80% { transform: scale(0.92, 0.95); }
+  }
+  
+  @keyframes pulse {
+    0%, 50%, 100% {  background: #fee; }
+    30%, 80% { background: #fff; }
+  }
+ 
+  .icons-wrapper{
+    position: absolute;
+    right:50px;
+    top: 100px;
+    max-width: 200px;
+    height: 100%;
+  }
+  .icons-wrapper i{
+    font-size: 100px;
+  }
+  .hand-raised {
+    background-color: rgba(255, 250, 205, 0.5); /* Lemon Chiffon with transparency */
+}
+.heart-shape {
+    background-color: rgba(255, 228, 225, 0.5); /* Misty Rose with transparency */
+}
+.thumbs-up {
+    background-color: rgba(230, 249, 224, 0.5); /* Honeydew with transparency */
+}
+.thumbs-up .thumbsup.d-none{
+    display: block !important;
+}
+.heart-shape .bigheart.d-none{
+    display: block !important;
+}
+.hand-raised .handraised.d-none{
+    display: block !important;
+}
