@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="./Assets/Css/owl.carousel.min.css">
         <link rel="stylesheet" href="./Assets/Css/owl.theme.default.min.css">
         <link rel="stylesheet" href="./Assets/Css/jquery-ui.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="./Assets/Css/styles.css">
@@ -32,7 +33,7 @@
             <div class="row w-100">
 
                 <div class="col-12">
-                    <img src="./Assets/Images/simple-femail-purp.gif" class="images active left-images" id="left-0">
+                    <img src="./Assets/Images/sada-female.gif" class="images active left-images" id="left-0">
                     <img src="./Assets/Images/clap-female.gif" class="images left-images d-none" id="left-4">
                     <img src="./Assets/Images/hi-female.gif" class="images left-images" id="left-1">
                     <img src="./Assets/Images/thumbsup-female.gif" class="images left-images" id="left-2">
@@ -40,6 +41,13 @@
                     <div >
                         <div class="d-none"><canvas id="canvas" ></canvas></div>
                         <div id="label-container" class="d-flex mt-4 justify-content-lg-around d-none"></div>
+                    </div>
+                    <div class="custom-box-relative">
+                        <div class="icons-wrapper">
+                            <div id="hearticon" class="bigheart d-none"><i class="far fa-heart"></i></div>
+                            <div id="thumbsup" class="thumbsup d-none"><i class="fa fa-regular fa-thumbs-up"></i></div>
+                            <div id="handup" class="handraised d-none"><i class="fa fa-regular fa-hand"></i></div>
+                        </div>  
                     </div>
                  
                 </div>
@@ -50,11 +58,7 @@
         </div>
         <div class="footer-wrapper-new">
             <div class="button-container">
-                <button id="mute-unmute">
-                    <i class="fa fa-solid fa-microphone"></i>
-                    <i class="fa fa-solid fa-microphone-slash"></i>
-    
-                </button>
+           
                 <button id="end-call"><i class="fas fa-phone"></i></button>
                 <button id="chat" class="center-button"><i class="fas fa-comment"></i></button>
               </div>
@@ -173,7 +177,7 @@ closeBtn.addEventListener('click', function(){
                            labelContainer.childNodes[i].innerHTML = classPrediction;
        
                            // Check if the current class has the highest probability
-                           if (prediction[i].probability > 0.5 && prediction[i].probability > maxClassProbability) {
+                           if (prediction[i].probability > 0.75 && prediction[i].probability > maxClassProbability) {
                                maxClassProbability = prediction[i].probability;
                                maxClassIndex = i;
                            }
@@ -185,7 +189,7 @@ closeBtn.addEventListener('click', function(){
                            const activeImageId = classToImageMap[activeClassName];
        
                            if (activeImageId) {
-                               for (let i = 0; i < 5; i++) { // We have 4 images, update the loop range
+                               for (let i = 0; i < 4; i++) { // We have 4 images, update the loop range
                                    const imageElement = document.getElementById(`left-${i}`);
                                    if (`left-${i}` === activeImageId) {
                                        imageElement.classList.add('active');
@@ -196,7 +200,7 @@ closeBtn.addEventListener('click', function(){
                            }
                        } else {
                            // If no class probability is greater than 0.5, ensure default image is active
-                           for (let i = 0; i < 5; i++) { // We have 4 images, update the loop range
+                           for (let i = 0; i < 4; i++) { // We have 4 images, update the loop range
                                const imageElement = document.getElementById(`left-${i}`);
                                if (i === 0) {
                                    imageElement.classList.add('active');

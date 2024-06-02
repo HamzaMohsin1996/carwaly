@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>face-api</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ml5js/Intro-ML-Arts-IMA@ml5-build-10-7-19/ml5_build/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        #canvas {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        #video {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 0;
+            border: 3px #fff solid;
+            border-radius: 10px;
+        }
+
+        .mood-tracking {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .mood-tracking.neutral {
+            background-color: #f0f0f0;
+        }
+
+        .mood-tracking.happy {
+            background-color: #4caf50;
+        }
+
+        .mood-tracking.angry {
+            background-color: #f44336;
+        }
+
+        .mood-tracking.sad {
+            background-color: #2196f3;
+        }
+
+        .mood-tracking.disgusted {
+            background-color: #9c27b0;
+        }
+
+        .mood-tracking.surprised {
+            background-color: #ffeb3b;
+        }
+
+        .mood-tracking.fear {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="mood-tracker">
+            <h1>Emotional Tracking Mood</h1>
+        </div>
+        <div class="mood-tracking">
+            <p id="funny-message"></p>
+        </div>
+    </div>
+    <script>
+    function gotFaces(error, result) {
+    if (error) {
+        console.log(error);
+        return;
+    }
+
+    detections = result;　 // Now all the data in this detections: 全ての検知されたデータがこのdetectionの中に
+
+    // Clear previous funny message
+    document.getElementById('funny-message').innerText = '';
+
+    clear(); // Draw transparent background;: 透明の背景を描く
+    drawBoxs(detections); // Draw detection box: 顔の周りの四角の描画
+    drawLandmarks(detections); //// Draw all the face points: 全ての顔のポイントの描画
+    drawExpressions(detections, 20, 250, 14); // Draw face expression: 表情の描画
+
+    // Call function to display funny response based on mood
+    if (detections.length > 0) {
+        let mood = getDominantMood(detections[0].expressions);
+        displayFunnyResponse(mood);
+    }
+
+    faceapi.detect(gotFaces); // Call the function again at here: 認識実行の関数をここでまた呼び出す
+}
+
+function displayFunnyResponse(mood) {
+    let funnyMessages = {
+        stressed: "Looks like it's time for some relaxation! How about a soothing massage chair to go with those dim red lights?",
+        relaxed: "Ah, the calm before the storm. Enjoy the serene ambiance! Maybe a cup of tea would complement the soothing blue lights?",
+        happy: "Feeling chipper, aren't we? Let's keep the good vibes flowing with some upbeat tunes and colorful disco lights!",
+        sad: "Oh no, the blues are setting in! How about some comfort food and a cozy blanket under the soft glow of the lights?",
+        surprised: "Well, well, what do we have here? You seem pleasantly surprised! How about a spontaneous dance party with flashy lights to match?",
+        angry: "Watch out, we've got a firecracker on our hands! How about some calming lavender aromatherapy to cool off the fiery mood?",
+        disgusted: "Yikes! That expression says it all. Let's turn things around with a delightful distraction. How about a comedy show under the warm glow of the lights?"
+    };
+
+    let message = funnyMessages[mood];
+    if (message) {
+        console.log(message); // Display the funny message in the console
+        document.getElementById('funny-message').innerText = message; // Update HTML element with the funny message
+    }
+}
+
+        let faceapi;
+        let detections = [];
+
+        let video;
+        let canvas;
+
+        function setup() {
+            canvas = createCanvas(480, 360);
+            canvas.id("canvas");
+
+            video = createCapture(VIDEO); // Create the video: ビデオオブジェクトを作る
+            video.id("video");
+            video.size(width, height);
+
+            const faceOptions = {
+                withLandmarks: true,
+                withExpressions: true,
+                withDescriptors: true,
+                minConfidence: 0.5
+            };
+
+            // Initialize the model: モデルの初期化
+            faceapi = ml5.faceApi(video, faceOptions, faceReady);
+        }
+
+        function faceReady() {
+            faceapi.detect(gotFaces); // Start detecting faces: 顔認識開始
+        }
+
+        // Got faces: 顔を検知
+        function gotFaces(error, result) {
+            if (error) {
+                console.log(error);
+                return;
+            }
+
+            detections = result;　 // Now all the data in this detections: 全ての検知されたデータがこのdetectionの中に
+            // console.log(detections);
+
+            clear(); // Draw transparent background;: 透明の背景を描く
+            drawBoxs(detections); // Draw detection box: 顔の周りの四角の描画
+            drawLandmarks(detections); //// Draw all the face points: 全ての顔のポイントの描画
+            drawExpressions(detections, 20, 250, 14); // Draw face expression: 表情の描画
+
+            faceapi.detect(gotFaces); // Call the function again at here: 認識実行の関数をここでまた呼び出す
+        }
+
+        function drawBoxs(detections) {
+            if (detections.length > 0) { // If at least 1 face is detected: もし1つ以上の顔が検知されていたら
+                for (f = 0; f < detections.length; f++) {
+                    let {
+                        _x,
+                        _y,
+                        _width,
+                        _height
+                    } = detections[f].alignedRect._box;
+                    stroke(44, 169, 225);
+                    strokeWeight(1);
+                    noFill();
+                    rect(_x, _y, _width, _height);
+                }
+            }
+        }
+
+        function drawLandmarks(detections) {
+            if (detections.length > 0) { // If at least 1 face is detected: もし1つ以上の顔が検知されていたら
+                for (f = 0; f < detections.length; f++) {
+                    let points = detections[f].landmarks.positions;
+                    for (let i = 0; i < points.length; i++) {
+                        stroke(44, 169, 225);
+                        strokeWeight(3);
+                        point(points[i]._x, points[i]._y);
+                    }
+                }
+            }
+        }
+
+        function drawExpressions(detections, x, y, textYSpace) {
+            if (detections.length > 0) { // If at least 1 face is detected: もし1つ以上の顔が検知されていたら
+                let {
+                    neutral,
+                    happy,
+                    angry,
+                    sad,
+                    disgusted,
+                    surprised,
+                    fearful
+                } = detections[0].expressions;
+                textFont('Helvetica Neue');
+                textSize(14);
+                noStroke();
+
+                let moodClass = '';
+                let maxExpression = Math.max(neutral, happy, angry, sad, disgusted, surprised, fearful);
+                if (maxExpression === neutral) {
+                    moodClass = 'neutral';
+                } else if (maxExpression === happy) {
+                    moodClass = 'happy';
+                } else if (maxExpression === angry) {
+                    moodClass = 'angry';
+                } else if (maxExpression === sad) {
+                    moodClass = 'sad';
+                } else if (maxExpression === disgusted) {
+                    moodClass = 'disgusted';
+                } else if (maxExpression === surprised) {
+                    moodClass = 'surprised';
+                } else if (maxExpression === fearful) {
+                    moodClass =
+                    'fear';
+                }
+
+                fill(44, 169, 225);
+                let moodDiv = document.querySelector('.mood-tracking');
+                moodDiv.classList = 'mood-tracking ' + moodClass;
+
+                text("neutral:       " + nf(neutral * 100, 2, 2) + "%", x, y);
+                text("happiness: " + nf(happy * 100, 2, 2) + "%", x, y + textYSpace);
+                text("anger:        " + nf(angry * 100, 2, 2) + "%", x, y + textYSpace * 2);
+                text("sad:            " + nf(sad * 100, 2, 2) + "%", x, y + textYSpace * 3);
+                text("disgusted: " + nf(disgusted * 100, 2, 2) + "%", x, y + textYSpace * 4);
+                text("surprised:  " + nf(surprised * 100, 2, 2) + "%", x, y + textYSpace * 5);
+                text("fear:           " + nf(fearful * 100, 2, 2) + "%", x, y + textYSpace * 6);
+            } else { // If no faces are detected: 顔が1つも検知されていなかったら
+                text("neutral: ", x, y);
+                text("happiness: ", x, y + textYSpace);
+                text("anger: ", x, y + textYSpace * 2);
+                text("sad: ", x, y + textYSpace * 3);
+                text("disgusted: ", x, y + textYSpace * 4);
+                text("surprised: ", x, y + textYSpace * 5);
+                text("fear: ", x, y + textYSpace * 6);
+            }
+        }
+    </script>
+</body>
+
+</html>
