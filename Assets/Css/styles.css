@@ -2056,7 +2056,7 @@ h2{
     height: auto;
     display: none;
     max-width: 250px;
-    margin: 0 auto;
+    margin: 0;
 }
 .images.active {
     display: block;
@@ -2221,4 +2221,8 @@ h2{
 }
 .hand-raised .handraised.d-none{
     display: block !important;
+}
+
+.icons-wrapper img{
+    max-width: 200px;
 }
