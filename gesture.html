@@ -80,8 +80,8 @@
                 <!-- Messages will be displayed here -->
             </div>
             <div class="chat-footer">
-                <textarea placeholder="Type your message..."></textarea>
-                <button><i class="fa fa-paper-plane"></i></button>
+                <textarea placeholder="Type your message..." id="chattext" rows="1" oninput="autoResize(this)" onkeydown="handleEnter(event)"></textarea>
+                <button id="sendButton"><i class="fa fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
@@ -229,7 +229,36 @@
             }
         }
 
-        window.addEventListener("load", init);
+        function autoResize(textarea) {
+            textarea.style.height = 'auto'; // Reset height
+            textarea.style.height = textarea.scrollHeight + 'px'; // Set to scrollHeight
+        }
+        function sendMessage() {
+            const chatText = document.getElementById('chattext');
+            const message = chatText.value.trim();
+
+            if (message) {
+                const chatMessages = document.querySelector('.chat-messages');
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('chat-message', 'user');
+                newMessage.textContent = message;
+
+                chatMessages.appendChild(newMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+
+                chatText.value = '';
+                autoResize(chatText); // Reset the textarea height
+            }
+        }
+
+        document.getElementById('sendButton').addEventListener('click', sendMessage);
+
+        function handleEnter(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault(); // Prevent the default behavior of newline
+                sendMessage();
+            }
+        }
     </script>
 </body>
 </html>
