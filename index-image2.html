@@ -66,7 +66,7 @@
                         <button class="center-button" id="thumbsup-btn"><i class="fas fa-thumbs-up"></i></button>
                         <button class="center-button" id="hand-raised"><i class="fas fa-hand-fist"></i></button>
                     </div>
-                    <button class="center-button" id="reaction-button"><i class="fas fa-smile-o"></i></button>
+                    <button class="center-button" id="reaction-button"><i class="fas fa-smile"></i></button>
                 </div>
            
                 <button id="chat" class="center-button"><i class="fas fa-comment"></i></button>
@@ -133,6 +133,50 @@ document.getElementById('hand-raised').addEventListener('click', function() {
   <script src="./Assets/Js/owl.carousel.min.js"></script>
   <script src="./Assets/Js/custom.js"></script>
       
+   
+  <script type="text/javascript">
+             
+    const sidebar = document.getElementById('sidebar');
+    const chattogglebtn = document.getElementById('chat');
+    const leftWrapper = document.getElementById('leftwrapper');
+    const closeBtn = document.getElementById('close-btn');
+    
+    
+    
+    chattogglebtn.addEventListener('click', function(){
+       sidebar.classList.toggle('active');
+       leftWrapper.classList.toggle('active');
+    })
+    closeBtn.addEventListener('click', function(){
+       sidebar.classList.remove('active');
+       leftWrapper.classList.remove('active');
+    })
+    function sendMessage() {
+            const chatText = document.getElementById('chattext');
+            const message = chatText.value.trim();
 
+            if (message) {
+                const chatMessages = document.querySelector('.chat-messages');
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('chat-message', 'user');
+                newMessage.textContent = message;
+
+                chatMessages.appendChild(newMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
+
+                chatText.value = '';
+                autoResize(chatText); // Reset the textarea height
+            }
+        }
+
+        document.getElementById('sendButton').addEventListener('click', sendMessage);
+
+        function handleEnter(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault(); // Prevent the default behavior of newline
+                sendMessage();
+            }
+        }
+    </script>
 </body>
 </html>
