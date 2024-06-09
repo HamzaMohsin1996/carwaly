@@ -2237,3 +2237,24 @@ h2{
     font-size: 14px;
     word-break: break-all;
 }
+.reaction-wrapper{
+    position: relative;
+}
+.reaction-wrapper-inner{    
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    box-shadow: 5px 4px 15px -5px #000000;
+    min-width: 200px;
+    border-radius: 10px;
+}
+.reaction-wrapper-inner.active{
+    display: flex;
+}
+
