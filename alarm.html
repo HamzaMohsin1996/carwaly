@@ -48,11 +48,11 @@
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', () => {
       const alarmImage = document.getElementById('alarmImage');
       const alarmSound = document.getElementById('alarmSound');
 
-      // Attempt to play sound on page load
+      // Function to play sound
       function playAlarmSound() {
         alarmSound.play().catch((error) => {
           console.log('Autoplay prevented: ', error);
@@ -66,11 +66,16 @@
         alarmSound.currentTime = 0; // Reset audio to the beginning
       }
 
-      // Start playing the alarm sound on page load
-      playAlarmSound();
-
       // Event listener for image click to stop the alarm
       alarmImage.addEventListener('click', handleClick);
+
+      // Attempt to play sound on user interaction
+      document.body.addEventListener('click', function startAudio() {
+        playAlarmSound();
+        // Remove the listener after the first interaction
+        document.body.removeEventListener('click', startAudio);
+      });
+
     });
   </script>
 </body>
