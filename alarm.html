@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Animation</title>
+  <style>
+    body {
+      background: #2d2e32;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .alarm-wrapper {
+      max-width: 300px;
+      position: relative;
+    }
+    img {
+      max-width: 100%;
+    }
+    .alarm-base-wrapper {
+      position: absolute;
+      bottom: -13px;
+      left: 21px;
+      z-index: 1;
+    }
+    .rotate-animation {
+      animation: rotate 5s infinite linear; /* Rotate continuously */
+    }
+    @keyframes rotate {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-500px, 0) rotate(90deg); }
+      50% { transform: translate(500px, 500px) rotate(180deg); }
+      75% { transform: translate(0, -500px) rotate(270deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="base">
+    <audio id="alarmSound" src="./Assets/Images/alarm-ringtone.mp3" autoplay="autoplay"></audio>
+    <div class="alarm-wrapper">
+      <img src="./Assets/Images/alarm-main2.png" alt="Alarm" class="alarm-main-wrapper rotate-animation" id="alarmImage">
+      <img src="./Assets/Images/alarm-base2.png" alt="Alarm Base" class="alarm-base-wrapper">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const alarmImage = document.getElementById('alarmImage');
+      const alarmSound = document.getElementById('alarmSound');
+
+      // Attempt to play sound on page load
+      function playAlarmSound() {
+        alarmSound.play().catch((error) => {
+          console.log('Autoplay prevented: ', error);
+        });
+      }
+
+      // Function to handle image click to stop the alarm and animation
+      function handleClick() {
+        alarmImage.classList.remove('rotate-animation');
+        alarmSound.pause();
+        alarmSound.currentTime = 0; // Reset audio to the beginning
+      }
+
+      // Start playing the alarm sound on page load
+      playAlarmSound();
+
+      // Event listener for image click to stop the alarm
+      alarmImage.addEventListener('click', handleClick);
+    });
+  </script>
+</body>
+</html>
