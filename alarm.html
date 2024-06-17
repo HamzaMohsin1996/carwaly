@@ -6,7 +6,7 @@
   <title>Alarm Animation</title>
   <style>
     body {
-      background: #2d2e32;
+      background: #eefffc;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -14,8 +14,7 @@
       margin: 0;
     }
     .alarm-wrapper {
-      max-width: 300px;
-      position: relative;
+     
     }
     img {
       max-width: 100%;
@@ -25,32 +24,124 @@
       bottom: -13px;
       left: 21px;
       z-index: 1;
+     
+    }
+    #base-wrapper{
+      position: absolute;
+    bottom: 100px;
+    left: 36%;
+    max-width: 400px;
+    display: none;
+    }
+    #base-wrapper.active-wrapper{
+      display: block;
     }
     .rotate-animation {
       animation: rotate 5s infinite linear; /* Rotate continuously */
     }
+   .alarm-main-wrapper.rotate-animation{
+    display: none;
+   }
+   .alarm-main-wrapper{
+    display: block;
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+   }
+   
+   .jumping-box{
+    position: absolute;
+    animation: combined 2s linear infinite;
+    -webkit-animation: combined 2s linear infinite;
+    left: 0;
+    top: 0;
+    max-width: 300px;
+   }
+   .jumping-box.active{
+    display: none;
+   }
+  
+ 
     @keyframes rotate {
       0% { transform: translate(0, 0) rotate(0deg); }
       25% { transform: translate(-500px, 0) rotate(90deg); }
-      50% { transform: translate(500px, 500px) rotate(180deg); }
+      50% { transform: translate(500px, 300px) rotate(180deg); }
       75% { transform: translate(0, -500px) rotate(270deg); }
       100% { transform: translate(0, 0) rotate(360deg); }
     }
+
+
+    @keyframes combined {
+    16%, 48%, 78%  {
+        top: 190px;
+        animation-timing-function: ease-out;
+    }
+    32% {
+        top: 50px;
+        animation-timing-function: ease-in;
+    }
+    62% {
+        top: 100px;
+        animation-timing-function: ease-in;
+    }
+    90% {
+        top: 150px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: rotate(360deg);
+        top: 190px;
+        animation-timing-function: ease-out;
+        left:100%;
+    }
+}
+@-webkit-keyframes combined {
+    16%, 48%, 78%  {
+        top: 190px;
+        -webkit-animation-timing-function: ease-out;
+    }
+    32% {
+        top: 50px;
+        -webkit-animation-timing-function: ease-in;
+    }
+    62% {
+        top: 100px;
+        -webkit-animation-timing-function: ease-in;
+    }
+    90% {
+        top: 150px;
+        -webkit-animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        top: 190px;
+        -webkit-animation-timing-function: ease-out;
+        left:100%;
+    }
+}
+
+
+
+
   </style>
 </head>
 <body>
   <div id="base">
-    <audio id="alarmSound" src="./Assets/Images/alarm-ringtone.mp3" autoplay="autoplay"></audio>
+    <audio id="alarmSound" src="./Assets/Images/alarm-tone.mp3" autoplay="autoplay"></audio>
     <div class="alarm-wrapper">
-      <img src="./Assets/Images/alarm-main2.png" alt="Alarm" class="alarm-main-wrapper rotate-animation" id="alarmImage">
-      <img src="./Assets/Images/alarm-base2.png" alt="Alarm Base" class="alarm-base-wrapper">
+      <img src="./Assets/Images/jumping-alarm-orignal1.png" alt="Alarm" class="alarm-main-wrapper rotate-animation"  id="second-image-new">
+      <img src="./Assets/Images/jumping-alarm-bounce1.png" alt="" class="jumping-box" id="alarmImage">
+      <img src="./Assets/Images/alarm-base.png" alt="" id="base-wrapper">
     </div>
   </div>
 
   <script>
    document.addEventListener('DOMContentLoaded', () => {
       const alarmImage = document.getElementById('alarmImage');
+      const alarmImagerest = document.getElementById('second-image-new');
       const alarmSound = document.getElementById('alarmSound');
+      const alarmbase = document.getElementById('base-wrapper');
+      
 
       // Function to play sound
       function playAlarmSound() {
@@ -61,7 +152,9 @@
 
       // Function to handle image click to stop the alarm and animation
       function handleClick() {
-        alarmImage.classList.remove('rotate-animation');
+        alarmImagerest.classList.remove('rotate-animation');
+        alarmImage.classList.add('active');
+        alarmbase.classList.add('active-wrapper');
         alarmSound.pause();
         alarmSound.currentTime = 0; // Reset audio to the beginning
       }
