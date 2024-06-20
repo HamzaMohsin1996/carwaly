@@ -30,11 +30,11 @@
         <div class="main-content-inner">
             <div class="container">
                 <div class="main-content"> 
-            <div class="row w-100">
+            <div class="row w-100 images-in-center align-items-end">
+                <audio id="audio-thumbsup" src="./Assets/Images/audio-noti.wav"></audio>
 
-                <div class="col-12">
+                <div class="col-3 small-gifs">
                     <img src="./Assets/Images/simple-male2.gif" class="images active left-images" id="left-0">
-                    <img src="./Assets/Images/clap-male2.gif" class="images left-images d-none" id="left-4">
                     <img src="./Assets/Images/hi-male2.gif" class="images left-images" id="left-1">
                     <img src="./Assets/Images/thumbsup-male2.gif" class="images left-images" id="left-2">
                     <img src="./Assets/Images/heart-male2.gif" class="images left-images" id="left-3">
@@ -56,6 +56,20 @@
                             </div>
                         </div>  
                     </div>
+                 
+                </div>
+
+                <div class="col-9 large-gifs">
+                    <img src="./Assets/Images/male.gif" class="images active left-images" id="left-0">
+                    <img src="./Assets/Images/hi-male.gif" class="images left-images" id="left-1">
+                    <img src="./Assets/Images/thumbs-up-male.gif" class="images left-images" id="left-2">
+                    <img src="./Assets/Images/hamza.gif" class="images left-images" id="left-3">
+                    <img src="./Assets/Images/clap-male.gif" class="images left-images d-none" id="left-4">
+                    <div >
+                        <div class="d-none"><canvas id="canvas" ></canvas></div>
+                        <div id="label-container" class="d-flex mt-4 justify-content-lg-around d-none"></div>
+                    </div>
+                   
                  
                 </div>
               
@@ -105,7 +119,8 @@
     const chattogglebtn = document.getElementById('chat');
     const leftWrapper = document.getElementById('leftwrapper');
     const closeBtn = document.getElementById('close-btn');
-    
+    const thumbsupAudio = document.getElementById('audio-thumbsup');
+     let lastPlayedAudio = null;
     
     
     chattogglebtn.addEventListener('click', function(){
@@ -185,7 +200,7 @@
                                labelContainer.childNodes[i].innerHTML = classPrediction;
            
                                // Check if the current class has the highest probability
-                               if (prediction[i].probability > 0.75 && prediction[i].probability > maxClassProbability) {
+                               if (prediction[i].probability > 0.90 && prediction[i].probability > maxClassProbability) {
                                    maxClassProbability = prediction[i].probability;
                                    maxClassIndex = i;
                                }
@@ -198,7 +213,15 @@
                                const activeImageId = classToImageMap[activeClassName];
                                const activeBodyClass = classToBodyClassMap[activeClassName];
                        
-    
+                               if (lastPlayedAudio !== thumbsupAudio) {
+                if (lastPlayedAudio) {
+                    lastPlayedAudio.pause();
+                    lastPlayedAudio.currentTime = 0;
+                }
+                thumbsupAudio.play();
+                lastPlayedAudio = thumbsupAudio;
+            }
+        
                                
            
                                if (activeImageId) {
@@ -223,6 +246,11 @@
                                        imageElement.classList.remove('active');
                                    }
                                }
+                               if (lastPlayedAudio) {
+            lastPlayedAudio.pause();
+            lastPlayedAudio.currentTime = 0;
+            lastPlayedAudio = null;
+        }
                            }
     
                        
@@ -241,7 +269,7 @@
                                ctx.drawImage(webcam.canvas, 0, 0);
                                // draw the keypoints and skeleton
                                if (pose) {
-                                   const minPartConfidence = 0.75
+                                   const minPartConfidence = 0.90
                                    ; tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
                                    tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
                                }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Animations</title>
+    <link rel="stylesheet" href="./Assets/Css/styles.css">
+    <style>
+
+        .wrapper-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 200px; /* Adjust size as needed */
+            height: 200px; /* Adjust size as needed */
+        }
+
+        .images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .images.active {
+            display: block;
+        }
+
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+
+        #continueButton {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Gesture Bond</h2>
+    </div>
+    <div class="wrapper-inner">
+    <div class="animation-container">
+        <img src="./Assets/Images/simple-male2.gif" class="images active" id="gesture-0">
+        <img src="./Assets/Images/hi-male2.gif" class="images" id="gesture-1">
+        <img src="./Assets/Images/thumbsup-male2.gif" class="images" id="gesture-2">
+        <img src="./Assets/Images/heart-male2.gif" class="images" id="gesture-3">
+    </div>
+    <div class="navigation-buttons">
+        <button id="backGesture" class="grey-btn custom-btn">Back</button>
+        <button class="primary-btn custom-btn ms-4" id="nextGesture">Next</button>
+        <button id="continueButton" class="custom-btn secondary-btn">Lets Start</button>
+    </div>      
+</div>
+
+    <script>
+        let currentGesture = 0;
+        const gestures = document.querySelectorAll('.images');
+        const nextButton = document.getElementById('nextGesture');
+        const backButton = document.getElementById('backGesture');
+        const continueButton = document.getElementById('continueButton');
+
+        function showGesture(index) {
+            gestures.forEach((gesture, i) => {
+                gesture.classList.toggle('active', i === index);
+            });
+        }
+
+        function showNextGesture() {
+            if (currentGesture < gestures.length - 1) {
+                currentGesture++;
+                showGesture(currentGesture);
+            }
+            updateButtons();
+        }
+
+        function showPreviousGesture() {
+            if (currentGesture > 0) {
+                currentGesture--;
+                showGesture(currentGesture);
+            }
+            updateButtons();
+        }
+
+        function updateButtons() {
+            if (currentGesture === gestures.length - 1) {
+                nextButton.style.display = 'none';
+                continueButton.style.display = 'block';
+            } else {
+                nextButton.style.display = 'block';
+                continueButton.style.display = 'none';
+            }
+
+            if (currentGesture === 0) {
+                backButton.style.display = 'none';
+            } else {
+                backButton.style.display = 'block';
+            }
+        }
+
+        nextButton.addEventListener('click', showNextGesture);
+        backButton.addEventListener('click', showPreviousGesture);
+        continueButton.addEventListener('click', () => {
+            window.location.href = 'gesture-2.html';
+        });
+
+        updateButtons(); // Initialize button states on page load
+    </script>
+</body>
+</html>

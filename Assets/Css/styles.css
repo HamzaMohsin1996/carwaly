@@ -31,6 +31,7 @@ body{
     height: 100%;
     font-family: 'Plus Jakarta Sans Regular';
     font-size: 18px;
+    margin: 0;
 }
 /* Custom Font sizes */
 h1,h2,h3,h4,h5,h6,p{
@@ -2258,3 +2259,36 @@ h2{
     display: flex;
 }
 
+.images-in-center .images{
+    margin: 0 auto;
+}
+.large-gifs img{
+max-width: 400px;
+width: 100%;
+}
+.large-gifs img{
+    max-width: 400px;
+    width: 100%;
+    }
+    .custom-btn{
+        padding: 10px;
+        min-width: 150px;
+       font-size: 14px;
+        color: white;
+        border-radius: 20px;
+    }
+    .primary-btn{
+        background: #3597f0;
+    }
+    .grey-btn{
+        background-color: grey;
+        margin-right: 15px;
+    }
+    .secondary-btn{
+        background: #114f87; 
+    }
+    .navigation-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
