@@ -2057,7 +2057,7 @@ h2{
     height: auto;
     display: none;
     max-width: 250px;
-    margin: 0;
+    margin: 0 auto;
 }
 .images.active {
     display: block;
