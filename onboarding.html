@@ -5,45 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gesture Animations</title>
     <link rel="stylesheet" href="./Assets/Css/styles.css">
-    <style>
-        .wrapper-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .animation-container {
-            position: relative;
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .images-wrapper {
-            max-width: 200px;
-            margin: 0 auto;
-            display: none;
-        }
-
-        .images-wrapper.active {
-            display: block;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        .navigation-buttons {
-            margin-top: 20px;
-        }
-
-        #continueButton {
-            display: none;
-        }
-    </style>
+   
 </head>
 <body>
     <div class="header">
@@ -51,21 +13,36 @@
     </div>
     <div class="wrapper-inner">
         <div class="animation-container">
-            <div class="hidden"><img src="./Assets/Images/simple-male2.gif" class="images-wrapper" id="gesture-0"><h5>Please follow the instructions to learn the gestures.</h5></div>
-            <div class="hidden"><img src="./Assets/Images/hi-male2.gif" class="images-wrapper" id="gesture-1"><h5>Use this gesture to ask questions or inform others about small updates.</h5></div>
-            <div ><img src="./Assets/Images/thumbsup-male2.gif" class="images-wrapper active" id="gesture-2"><h5>Use this gesture to indicate task completion or to show approval.</h5></div>
-            <div class="hidden"><img src="./Assets/Images/heart-male2.gif" class="images-wrapper" id="gesture-3"><h5>Use this gesture to send love or support to your groupmates, fostering a positive environment.</h5></div>
-            <div class="hidden"><img src="./Assets/Images/smile-male2.gif" class="images-wrapper" id="gesture-4"><h5>Use this gesture to show happiness or satisfaction.</h5></div>
+            <div class="images-wrapper active" id="gesture-0">
+                <img src="./Assets/Images/simple-male2.gif">
+                <h5>Please follow the instructions to learn the gestures.</h5>
+            </div>
+            <div class="images-wrapper" id="gesture-1">
+                <img src="./Assets/Images/hi-male2.gif">
+                <h5>Use this gesture to ask questions or inform others about small updates.</h5>
+            </div>
+            <div class="images-wrapper" id="gesture-2">
+                <img src="./Assets/Images/thumbsup-male2.gif">
+                <h5>Use this gesture to indicate task completion or to show approval.</h5>
+            </div>
+            <div class="images-wrapper" id="gesture-3">
+                <img src="./Assets/Images/heart-male2.gif">
+                <h5>Use this gesture to send love or support to your groupmates, fostering a positive environment.</h5>
+            </div>
+            <div class="images-wrapper" id="gesture-4">
+                <img src="./Assets/Images/smile-male2.gif">
+                <h5>Use this gesture to show happiness or satisfaction.</h5>
+            </div>
         </div>
         <div class="navigation-buttons">
-            <button id="backGesture" class="grey-btn custom-btn">Back</button>
+            <button id="backGesture" class="grey-btn custom-btn" style="display: none;">Back</button>
             <button class="primary-btn custom-btn ms-4" id="nextGesture">Next</button>
             <button id="continueButton" class="custom-btn secondary-btn">Let's Get Started</button>
         </div>
     </div>
 
     <script>
-        let currentGesture = 2; // Start from the first visible gesture
+        let currentGesture = 0; // Start from the first gesture
         const gestures = document.querySelectorAll('.images-wrapper');
         const nextButton = document.getElementById('nextGesture');
         const backButton = document.getElementById('backGesture');
@@ -80,27 +57,21 @@
         function showNextGesture() {
             if (currentGesture < gestures.length - 1) {
                 currentGesture++;
-                while (gestures[currentGesture].classList.contains('hidden') && currentGesture < gestures.length - 1) {
-                    currentGesture++;
-                }
                 showGesture(currentGesture);
             }
             updateButtons();
         }
 
         function showPreviousGesture() {
-            if (currentGesture > 2) { // Prevent going back to the first hidden gestures
+            if (currentGesture > 0) {
                 currentGesture--;
-                while (gestures[currentGesture].classList.contains('hidden') && currentGesture > 2) {
-                    currentGesture--;
-                }
                 showGesture(currentGesture);
             }
             updateButtons();
         }
 
         function updateButtons() {
-            if (currentGesture === gestures.length - 1) {
+            if (currentGesture === 3) {
                 nextButton.style.display = 'none';
                 continueButton.style.display = 'block';
             } else {
@@ -108,7 +79,7 @@
                 continueButton.style.display = 'none';
             }
 
-            if (currentGesture === 2) { // First visible gesture index
+            if (currentGesture === 0) {
                 backButton.style.display = 'none';
             } else {
                 backButton.style.display = 'block';
