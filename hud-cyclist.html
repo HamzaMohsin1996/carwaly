@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Data Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #participantChart {
+            width: 90%;
+            max-width: 900px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div id="participantChart"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const traceGraduateSome = {
+                x: ['18-22', '23-27', '28-32'],
+                y: [0, 1, 1], // Female Graduate Some
+                name: 'Female Graduate - Some Experience',
+                type: 'bar',
+                marker: { color: '#1f77b4' }
+            };
+
+            const traceGraduateNone = {
+                x: ['18-22', '23-27', '28-32'],
+                y: [0, 1, 1], // Male Graduate None
+                name: 'Male Graduate - None Experience',
+                type: 'bar',
+                marker: { color: '#ff7f0e' }
+            };
+
+            const traceGraduateMaleSome = {
+                x: ['18-22', '23-27', '28-32'],
+                y: [0, 3, 0], // Male Graduate Some
+                name: 'Male Graduate - Some Experience',
+                type: 'bar',
+                marker: { color: '#2ca02c' }
+            };
+
+            const traceUndergradExtensive = {
+                x: ['18-22', '23-27', '28-32'],
+                y: [0, 1, 0], // Male Undergraduate Extensive
+                name: 'Male Undergraduate - Extensive Experience',
+                type: 'bar',
+                marker: { color: '#d62728' }
+            };
+
+            const traceUndergradNone = {
+                x: ['18-22', '23-27', '28-32'],
+                y: [1, 0, 0], // Male Undergraduate None
+                name: 'Male Undergraduate - None Experience',
+                type: 'bar',
+                marker: { color: '#9467bd' }
+            };
+
+            const traceUndergradSome = {
+                x: ['18-22', '23-27', '28-32'],
+                y: [2, 0, 0], // Male Undergraduate Some
+                name: 'Male Undergraduate - Some Experience',
+                type: 'bar',
+                marker: { color: '#8c564b' }
+            };
+
+            const data = [traceGraduateSome, traceGraduateNone, traceGraduateMaleSome, traceUndergradExtensive, traceUndergradNone, traceUndergradSome];
+
+            const layout = {
+                title: 'Participant Data by Age, Gender, Experience, and Education',
+                barmode: 'group',
+                xaxis: { title: 'Age Group' },
+                yaxis: { title: 'Number of Participants' },
+                legend: { orientation: 'h', y: -0.2 }
+            };
+
+            Plotly.newPlot('participantChart', data, layout);
+        });
+    </script>
+</body>
+</html>

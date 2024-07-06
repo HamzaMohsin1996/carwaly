@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barista Responsibilities Chart</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+<div id="container" style="width: 100%; height: 400px;"></div>
+<script>
+    // Create the chart
+    Highcharts.chart('container', {
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Small Coffee Shop Breakdown of Barista Responsibilities',
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Source: Small Coffee Shop',
+            align: 'left'
+        },
+
+        accessibility: {
+            announceNewData: {
+                enabled: true
+            },
+            point: {
+                valueSuffix: '%'
+            }
+        },
+
+        plotOptions: {
+            series: {
+                borderRadius: 5,
+                dataLabels: [{
+                    enabled: true,
+                    distance: 15,
+                    formatter: function() {
+                        return `<span style="color:${this.color}">${this.point.name}</span>`;
+                    }
+                }, {
+                    enabled: true,
+                    distance: '-30%',
+                    filter: {
+                        property: 'percentage',
+                        operator: '>',
+                        value: 5
+                    },
+                    format: '{point.y:.1f}%',
+                    style: {
+                        fontSize: '0.9em',
+                        textOutline: 'none',
+                        color: 'white' 
+                    },
+                    formatter: function() {
+                        return `<span style="color:${this.color}">${this.point.y.toFixed(1)}%</span>`;
+                    }
+                }]
+            }
+        },
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
+                '<b>{point.y:.2f}%</b> of total<br/>'
+        },
+
+        series: [
+            {
+                name: 'Responsibilities',
+                colorByPoint: true,
+                data: [
+                    {
+                        name: 'Making drinks',
+                        y: 60,
+                        drilldown: 'Making drinks'
+                    },
+                    {
+                        name: 'Cleaning',
+                        y: 20,
+                        drilldown: 'Cleaning'
+                    },
+                    {
+                        name: 'Serving drinks',
+                        y: 10,
+                        drilldown: 'Serving drinks'
+                    },
+                    {
+                        name: 'Stock management',
+                        y: 10,
+                        drilldown: 'Stock management'
+                    }
+                ]
+            }
+        ],
+        drilldown: {
+            series: [
+                {
+                    name: 'Making drinks',
+                    id: 'Making drinks',
+                    data: [
+                        [
+                            'Making drinks',
+                            60
+                        ]
+                    ]
+                },
+                {
+                    name: 'Cleaning',
+                    id: 'Cleaning',
+                    data: [
+                        [
+                            'Cleaning',
+                            20
+                        ]
+                    ]
+                },
+                {
+                    name: 'Serving drinks',
+                    id: 'Serving drinks',
+                    data: [
+                        [
+                            'Serving drinks',
+                            10
+                        ]
+                    ]
+                },
+                {
+                    name: 'Stock management',
+                    id: 'Stock management',
+                    data: [
+                        [
+                            'Stock management',
+                            10
+                        ]
+                    ]
+                }
+            ]
+        }
+    });
+</script>
+</body>
+</html>
